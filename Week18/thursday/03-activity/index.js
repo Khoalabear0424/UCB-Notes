@@ -29,16 +29,20 @@ app.get('/', function (req, res) {
     res.send('<h2>Links you can go to</h2> \n <a href="/0">Khoa</a>')
 })
 
-app.get('/0', function (req, res) {
-    res.json(partners[0]);
-})
+// app.get('/0', function (req, res) {
+//     res.json(partners[0]);
+// })
 
-app.get('/1', function (req, res) {
-    res.json(partners[1]);
-})
+// app.get('/1', function (req, res) {
+//     res.json(partners[1]);
+// })
 
-app.get('/2', function (req, res) {
-    res.json(partners[2]);
+// app.get('/2', function (req, res) {
+//     res.json(partners[2]);
+// })
+
+app.get('/:numero', function (req, res) {
+    res.json(partners[req.params.numero]);
 })
 
 

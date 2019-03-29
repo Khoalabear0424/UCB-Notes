@@ -1,0 +1,14 @@
+make an express app that makes the following work IN ONE ROUTE
+
+/add/1/2
+	should send back 3
+
+/multiply/3/5
+	should send back 15
+
+/divide/10/2
+	should send back 5
+
+/subtract/100/3
+	should send back 97
+
