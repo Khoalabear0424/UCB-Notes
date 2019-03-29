@@ -1,0 +1,25 @@
+make 4 get routes
+
+put this at the top of your file put at least 3 people in the array other than yourself
+
+var partners = [
+	{
+		name: ,
+		favoriteHotBeverage: ,
+		favoriteColdBeverage: ,
+		likeChickpeas: ,
+		lastTimePlayedTag: 
+	}, ...
+];
+
+when the user hits /0
+
+	it will send back the first element of the partners array as json
+
+when the user hits /1
+
+	it will send back the second element of the partners array as json
+
+when the user hits /2
+
+	it will send back the third element of the partners array as json

@@ -6,8 +6,8 @@ app.get('/', function (req, res) {
 })
 
 app.get('/polar-bear', function (req, res) {
-    res.send({
-        name: "polar bear",
+    res.json({
+        name: "poslar bear",
         length: "8ft 7in",
         height: "2ft 6in",
         weight: 100
@@ -15,7 +15,7 @@ app.get('/polar-bear', function (req, res) {
 })
 
 app.get('/brown-bear', function (req, res) {
-    res.send({
+    res.json({
         name: "brown bear",
         length: "6ft 9in",
         height: "3ft 1in",
@@ -24,7 +24,7 @@ app.get('/brown-bear', function (req, res) {
 })
 
 app.get('/gorilla', function (req, res) {
-    res.send({
+    res.json({
         name: "gorilla",
         length: "7ft 7in",
         height: "8ft 6in",
@@ -33,7 +33,7 @@ app.get('/gorilla', function (req, res) {
 })
 
 app.get('/bison', function (req, res) {
-    res.send({
+    res.json({
         name: "bison",
         length: "4ft 7in",
         height: "5ft 6in",
