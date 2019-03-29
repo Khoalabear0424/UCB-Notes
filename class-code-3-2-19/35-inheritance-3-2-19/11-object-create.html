@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var ob = {
+		name: 'Haven',
+		hat: true, 
+		hoodie: true,
+		waterBottle: true
+	}
+
+	//clone the object named ob
+	var anotherOb = Object.create(ob);
+
+	anotherOb.macBook = true;
+
+	console.log('ob', ob);
+
+	console.log('anotherOb', anotherOb)
+
+</script>
+</body>
+</html>

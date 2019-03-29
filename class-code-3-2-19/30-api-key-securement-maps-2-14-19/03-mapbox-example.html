@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>	
+	<link href='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+	
+<script src='https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+<script>
+	var sanFranciscoCoords = [-122.414807, 37.786519];
+	
+	mapboxgl.accessToken = 'pk.eyJ1IjoicGF2YW5rYXQiLCJhIjoiY2pzNWhucGQ5MDVydDQ1bzlxdGsxcnI2dSJ9.-80x6n_ZIYkTXJT4W7g1CQ';
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v11',
+		center: sanFranciscoCoords,
+		zoom: 10
+	});
+
+	map.on('load', function() {
+	    map.addSource('single-point', {
+	        "type": "geojson",
+	        "data": {
+	        "type": "Point",
+	        "coordinates": sanFranciscoCoords
+	        }
+	    });
+	    
+	    map.addLayer({
+	        "id": "point",
+	        "source": "single-point",
+	        "type": "circle",
+	        "paint": {
+	        "circle-radius": 10,
+	        "circle-color": "red"
+	        }
+	    });
+	});
+
+
+</script>
+</body>
+</html>

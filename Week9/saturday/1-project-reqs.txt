@@ -1,0 +1,21 @@
+project requirements
+
+1 API used (other than firebase)
+
+
+firebase usage 
+
+1 grid framework (not bootstrap)
+
+1 JavaScript library that we haven't used in class
+
+you must use github
+
+you must have your idea approved by Pavan FIRST
+
+you must draw a wireframe and have it approved by Pavan SECOND
+
+you must use trello to organize task assignment and have your trello board approved by Pavan THIRD
+
+you must try to use branching and pull requests
+

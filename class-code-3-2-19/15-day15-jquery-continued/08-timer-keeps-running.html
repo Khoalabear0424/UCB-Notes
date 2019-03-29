@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// ["Marvin", "Fernando", "Janak", "Allan", "Aji", "James", "Dzhamilia"]
+
+	// write a function that will add a random element from the above array to the page
+
+	// call this function every 3 seconds
+
+	// after the function has ran 7 times, stop adding elements to the page
+
+	var names = ["Marvin", "Fernando", "Janak", "Allan", "Aji", "James", "Dzhamilia"];
+	
+	var counter = 0;
+
+	//one way
+		// function addStudentToPage(){
+		// 	var ranStudent = names[Math.floor(Math.random()*names.length)];
+			
+		// 	$('body').append(" " + ranStudent);
+		// }
+
+	//another way
+		function addStudentToPage(){
+			console.log('in the function')
+			if (counter < 3){
+				var ranStudent = names[Math.floor(Math.random()*names.length)];
+
+				//this paragraph is not on the page yet
+				var pa = $("<p>"); //<p></p>
+
+				pa.text(ranStudent);
+
+				$('body').append(pa);
+
+				counter++;
+			}
+		}
+
+	setInterval(addStudentToPage, 3000);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

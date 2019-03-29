@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+	// localStorage.getItem(...)
+	// localStorage.setItem(...)
+	// JSON.stringify(...)
+	// JSON.parse(...)
+	
+	//wrong way
+		// localStorage.setItem('movies', [{title: "home alone", rating: 'g'}, {title: "the matrix", rating: 'pg 13'}])
+
+		// localStorage.getItem('movies')
+		// "[object Object],[object Object]"
+	//correct way
+		// var arr = [{title: "home alone", rating: 'g'}, {title: "the matrix", rating: 'pg 13'}]
+		// arr
+		// [{…}, {…}]
+
+		// JSON.stringify(arr)
+		// "[{"title":"home alone","rating":"g"},{"title":"the matrix","rating":"pg 13"}]"
+
+		// arrStr = JSON.stringify(arr)
+		// "[{"title":"home alone","rating":"g"},{"title":"the matrix","rating":"pg 13"}]"
+		
+		// JSON.parse(arrStr)
+		// [{…}, {…}]
+
+		// JSON.stringify(arr)
+		// "[{"title":"home alone","rating":"g"},{"title":"the matrix","rating":"pg 13"}]"
+		// localStorage.setItem('movies', JSON.stringify(arr))
+		// undefined
+		// var arrTxt = localStorage.getItem('movies')
+		// undefined
+		// JSON.parse(arrTxt)
+		// (2) [{…}, {…}]
+</script>
+</body>
+</html>

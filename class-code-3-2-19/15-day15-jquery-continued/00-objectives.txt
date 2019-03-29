@@ -1,0 +1,17 @@
+1. students will go over the fridge exercise and the number checker exercise
+
+2. students will practice using data attributes
+
+3. students will practice using click events
+
+4. students will practice creating elements using jQuery like this:
+	
+	//one way
+		var pa = $('<p>');
+
+		$('#container').append(pa);
+
+	//another way
+		$('#container').html("<p></p>");
+
+

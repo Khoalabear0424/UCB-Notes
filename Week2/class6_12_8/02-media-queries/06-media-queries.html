@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div {
+			width: 100px;
+			height: 100px;
+			background-color: white;
+			border: 1px solid blue;
+		}
+
+		/*
+		  These rules take effect when the browser's width
+		  is either 768px or less.
+		*/
+		@media screen and (max-width: 768px) {
+		  body {
+		    background-color: black;
+		  }
+
+		  div {
+		  	background-color: yellow;
+		  }
+
+		  iframe {
+		  	display: none;
+		  }
+		}
+
+		@media screen and (max-width: 300px) {
+		  body {
+		    background-color: black;
+		  }
+
+		  div {
+		  	background-color: yellow;
+		  }
+
+		  iframe {
+		  	display: none;
+		  }
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/p0wxjZazRJs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</body>
+</html>

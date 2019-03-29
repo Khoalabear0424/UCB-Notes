@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		// make a variable named partner with properties of name, aBookRead, favoriteSport, hasAPet, computerType, currentlyWorksInTech, aMusicianListenedToRecently
+
+		// document.write each property of the partner variable onto this page 
+
+		//take a screenshot of your page and slack it out in the general channel
+
+
+		var buddy = {
+			name: "Mohammad",
+			aBookRead: "Clash of Civilization",
+			favoriteSport: "futbol",
+			hasAPet: false,
+			computerType: "mac",
+			currentlyWorksInTech: true,
+			aMusicianListenedToRecently: "Omar Akram"
+		}
+		// document.write(buddy.(Object.keys(buddy)[0]);
+		for (var x = 0; x < 7; x++) {
+
+			var key = Object.keys(buddy)[x];
+
+			document.write(key + ": " + buddy[key] + "<br>");  //key is a variable, not a "key" inside of the object must put in []
+		}
+
+
+		var obj = {
+			name: "Simon",
+			age: "20",
+			clothing: {
+				style: "simple",
+				hipster: false
+			}
+		}
+
+		for (var propt in obj) { //"propt" is in js
+			alert(propt + ': ' + obj[propt]);
+		}
+
+	</script>
+</body>
+
+</html>

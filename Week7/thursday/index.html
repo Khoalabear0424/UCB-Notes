@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <script>
+        function AlphabetSoup(str) {
+
+            // code goes here  
+
+            str = str.split("");
+            for (var i = 0; i < str.length; i++) {
+                str[i] = String.fromCharCode(str.charCodeAt(i) + 1);
+            }
+
+            return str.join("");
+
+        }
+    </script>
+
+</body>
+
+</html>

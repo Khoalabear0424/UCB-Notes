@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		/*background no repeat*/
+		#fridge {
+			background: url("fridge.jpg");
+			background-size: 200px 400px;
+			width: 200px;
+			height: 400px;
+		}
+
+		.onFridge {
+			background-color: red;
+			border: 1px solid black;
+			padding: 3px;
+		}
+	</style>
+</head>
+<body>
+<div id="buttons"></div>
+
+<div id="fridge"></div>
+
+<!-- one strategy -->
+<!-- <button>a</button>
+<button>b</button> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	// var arr = ['a', 'b', 'c'];
+
+	// 65-90 all caps
+	//String.fromCharCode(65);
+
+	for (var i=65; i<=90; i++){
+		var char = String.fromCharCode(i);
+		var b = $('<button>'); //<button></button>
+		b.text(char); //<button>A</button>
+		$('#buttons').append(b); //now the button is on the page
+	}
+
+	var clearB = $('<button>');
+	clearB.text('clear');
+	$('#buttons').append(clearB);
+
+	$('button').on('click', function(){
+		//$(this) is the button that we just clicked
+		var textInside = $(this).text();
+
+		if (textInside != 'clear'){
+			var letSpan = $('<span>').text(textInside);
+			//<span>A</span>
+			letSpan.addClass('onFridge');
+
+			$('#fridge').append(letSpan);
+		}else {
+			//one way
+				$('#fridge').empty();
+			//another way
+				// $('#fridge').html("");
+			//another way
+				// location.reload();
+		}
+	})
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

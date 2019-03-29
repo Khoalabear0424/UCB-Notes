@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Click Button with Firebase!</title>
+
+</head>
+
+<body>
+  <h3>
+    Only <span id="countTracker"></span> to Go!
+  </h3>
+
+
+  <button id="decrement">Subtract 1</button>
+  <button id="reset">Reset Counter</button>
+
+  <!-- JQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- ================================================================================== -->
+
+  <!-- Firebase JavaScript Link -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.1/firebase.js"></script>
+  <script>
+    var clickCounter = 100;
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDCwbFgCSRLEu53x_08nMTeevJALtzb2TU",
+      authDomain: "fir-f29a9.firebaseapp.com",
+      databaseURL: "https://fir-f29a9.firebaseio.com",
+      projectId: "fir-f29a9",
+      storageBucket: "fir-f29a9.appspot.com",
+      messagingSenderId: "330796259056"
+    };
+    
+    firebase.initializeApp(config);
+    
+    // Variables
+    // ================================================================================
+    
+    // Get a reference to the database service
+    var arrTracker = [100];
+    var database = firebase.database();
+
+    $('document').ready(function () {
+      database.ref().on('value', function(dataSnapShot)
+      {
+        // $('#countTracker').text('value');
+        $('#countTracker').text(dataSnapShot.val().arrTracker[arrTracker.length-1]);
+      })
+    });
+    
+    // Initializing our click count at 0
+    
+    // Functions
+    // ================================================================================
+    
+    // On Click
+    // $('document').ready(function () {
+    //       $('#countTracker').text(clickCounter);
+    // });
+    $("#decrement").on("click", function() {
+      
+      // Add 1 to clickCounter
+      arrTracker.push(arrTracker[arrTracker.length-1]-1);
+      
+      
+      // **** Store Click Data to Firebase in a JSON property called clickCount *****
+      // **** Note how we are using the Firebase .set() method ****
+      // **** .ref() refers to the path you want to save your data to
+      // **** Since we left .ref() blank, it will save to the root directory
+      database.ref().set({
+        arrTracker : arrTracker
+      });
+      
+      database.ref().on('value', function(dataSnapShot)
+      {
+        // $('#countTracker').text('value');
+        $('#countTracker').text(dataSnapShot.val().arrTracker[arrTracker.length-1]);
+      })
+      
+
+      // Now! go to https://fir-click-counter-7cdb9.firebaseio.com/ to see the impact to the DB
+    });
+  </script>
+
+</body>
+
+</html>

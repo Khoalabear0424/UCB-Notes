@@ -1,0 +1,27 @@
+one equal sign is assignment
+
+	var a = 3;
+
+two equal signs is comparison of value
+	
+	"1" == 1
+
+		true
+
+three equal signs is comparison of value and type
+
+	"1" === 1
+
+		false
+
+	1 === 1
+
+		true
+
+
+
+
+
+
+
+

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// write a function that prints hello, bye and farewell on seperate lines to the console
+	function salutations(){
+		console.log("hello");
+		console.log("bye");
+		console.log("farewell");
+	}
+
+	// write a function that will document.write bye and a line break to the html
+	function writeBye(){
+		document.write("bye");
+		document.write("<br>");
+	}
+
+	// write a function that takes in two arguments, adds them and then prints the result to the console
+	function add(a,b){
+		console.log(a+b);
+	}
+
+	// add(3,4);
+
+	// write a function that takes in two arguments, multiplies the and then prints the result to the console
+	function multiply(a,b){
+		console.log(a*b);
+	}
+
+	// write a function that takes in two arguments and returns true if they're equal and false otherwise
+
+	//one way
+		function ifNumsTrue(a,b){
+			if (a === b){
+				return true;
+			}else {
+				return false;
+			}
+		}
+
+	//another way
+		function ifNumsTrue(a,b){
+			return a === b;
+		}
+
+	// write a function that takes in a number and returns true if it's greater 3 and false otherwise
+
+	//one way
+		function greaterThanThree(num){
+			if (num > 3){
+				return true;
+			}else {
+				return false;
+			}
+		}
+
+	//another way
+		function greaterThanThree(a){
+			return a > 3;
+		}
+
+		var num = greaterThanThree(100);
+
+		console.log(num); //true
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,10 @@
+1. pavan will make sure he is recording
+
+2. students will go over the entire pull request process with the following commands
+
+	git pull origin master
+
+	git fetch
+	git checkout <branchname>
+
+3. students will go through a git activity

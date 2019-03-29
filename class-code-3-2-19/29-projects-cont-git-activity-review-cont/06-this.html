@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		.standOut {
+			background-color: yellow;
+			font-size: 40px;
+		}
+	</style>
+</head>
+<body>
+
+<button>juthika</button>
+
+<button>carol</button>
+
+<button>haven</button>
+
+<button>ebony</button>
+
+
+<!-- you should jQuery for all events and ajax calls because it works on every browser and every mobile browser and it's constantly being worked on, and it's been alive for along time. -->
+<!-- https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+	//we're using an anonymous function here
+	$('button').on('click', function(){
+		//this is the element we just clicked on
+
+		//$(this) let's us use jQuery on the element we just clicked on 
+
+			//without wrapping this in $(), we can't use the .hide function
+
+		// $(this).hide();
+		$(this).addClass('standOut');
+	});
+
+</script>
+</body>
+</html>
+
+
+
+
+

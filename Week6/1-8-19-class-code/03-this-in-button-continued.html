@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger Clicked</title>
+</head>
+
+<body>
+    <button class="clickMe" id="jason">Jason</button>
+    <button class="clickMe">Kelly</button>
+    <button class="clickMe">Lawrence</button>
+    <button class="clickMe">Thadeos</button>
+
+<!-- Added link to the jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function alertButtonText() {
+    console.log(this);
+	//if I clicked on jason
+	//$(this) is the same as $('#jason')
+	alert($(this).text());
+
+    //this.hide(); //you'll get an error
+	$(this).hide(); //hides the button
+}
+
+$('.clickMe').on('click', alertButtonText);
+
+</script>
+</body>
+
+</html>
+

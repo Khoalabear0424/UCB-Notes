@@ -1,0 +1,9 @@
+1. students will loop over the characters in a string
+
+2. students will use an array to hold a list of elements
+
+3. students will access different parts of an array
+
+4. students will get the length of an array
+
+5. students will loop over elements in an array

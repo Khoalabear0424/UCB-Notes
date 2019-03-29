@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// make a variable called counter and set it to 0.
+	var counter = 0;
+
+	// display the counter value onto the page
+	document.write(counter);
+
+	// write code so that if a vowel is pressed on the keyboard, the counter goes up 
+	var vowels = ["a", "e", "i", "o","u"];
+
+	document.addEventListener('keydown',checkVowel);
+	
+	function checkVowel(letter){
+		console.log(letter.key);
+		if(vowels.includes(letter.key)){
+			counter++;
+		}
+		document.write(counter + "<br>");
+		console.log("hello");
+	}
+
+
+		// and then display the new value of the counter onto the page
+</script>
+</body>
+</html>

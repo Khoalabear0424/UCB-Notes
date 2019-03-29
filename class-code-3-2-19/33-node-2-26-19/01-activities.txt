@@ -1,0 +1,5 @@
+1. 
+write a node file that will take an argument from the terminal, reverse it and console log it
+
+2. 
+write a node file that will take a number from the terminal, and console log true if it is even and odd if it is false

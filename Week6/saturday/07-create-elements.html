@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<style>
+#container div{ 
+	border: 1px solid red;
+	margin: 5px;
+}
+
+#container img{
+	width: 100%;
+	height: auto;
+}
+</style>
+<body>
+
+<div id="container"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var animals = [
+		{
+			name: 'bison', 
+			image: 'https://list25.com/wp-content/uploads/2015/03/american-bison-610x397.jpg',
+			funFact: 'the largest surviving terrestrial animals in North America and Europe'
+		},
+		{
+			name: 'dolphin', 
+			image: 'https://list25.com/wp-content/uploads/2015/03/spinner-dolphin-pod-610x457.jpg',
+			
+			funFact: 'some dolphins can swim 34.5 mph'
+		},
+		{
+			name: 'bald eagle', 
+			image: 'https://list25.com/wp-content/uploads/2015/03/bald-eagle-610x406.jpg',
+			funFact: 'makes largest nest out of all birds'
+		},
+	];
+
+		for(var i=0; i<animals.length; i++){
+			console.log(animals[i]);
+			var $d = $('<div>'); //<div></div>
+			$d.text("Name: " + animals[i].name);
+
+		//parapgrah two
+			var $p = $('<p>');
+				//make an image tag
+				var $im = $('<img>');
+				$im.attr('src',animals[i].image)
+				$p.append($im);
+
+			$d.append($p);
+
+		//paragraph three
+			var $p = $('<p>');
+			$p.text("Fun Fact: " + animals[i].funFact);
+			$d.append($p);
+
+			$('#container').append($d);
+		}
+
+	// write code to loop over the above array
+
+	// and create a div tag that looks like this for each object:
+		
+	// 	<div>
+	// 		<p>Name: bald eagle</p>
+	// 		<p>
+	// 			<img src="https://list25.com/wp-content/uploads/2015/03/bald-eagle-610x406.jpg">
+	// 		</p>
+	// 		<p>Fun fact: makes largest nest out of all birds</p>
+
+	// 	</div>
+	// then add it to the container div
+
+</script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+1.    select all of the people
+5.    count the number of people
+6.    find the max answer for question 1
+7.    find the min answer for question 1
+8.    find the average answer for question 2
+9.    find a count of the number times people answered a question 
+10.    find the difference between each person's answer and the average answer 

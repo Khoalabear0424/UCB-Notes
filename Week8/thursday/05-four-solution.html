@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+  <style type="text/css">
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <p>Choose Your Artist <input type="text"></p>
+    <button>GO!</button>
+  </form>
+
+  <div id="content" class="hidden">
+
+
+    <h1>
+      <a id="name">
+
+      </a>
+    </h1>
+
+    <img src="">
+
+    <h2><span id="fans"></span> Fans tracking this artist</h2>
+    <h2><span id="upcomingEvents"></span> upcoming events</h2>
+
+    <a href="" id="tourDates">See tour dates</a>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // write HTML and JavaScript that replicates the behavior in the screenshot of 02-weather-exercise.png
+
+    // use this starter code for your JavaScript 
+
+    $('button').on('click', function () {
+      //browser reloading 
+
+      event.preventDefault(); //this prevents the default action of the form - SO IT WON'T REFRESH THE PAGE
+      // alert('hi');
+
+      var artist = $('input').val().trim();
+
+      // This is our API key
+      var queryURL = "https://rest.bandsintown.com/artists/" + artist + "?app_id=codingbootcamp";
+
+      console.log(queryURL);
+
+      $.ajax({
+        url: queryURL,
+        method: "GET"
+      }).then(function (data) {
+        console.log(data.thumb_url);
+        console.log(data.name);
+        console.log(data.tracker_count);
+        console.log(data.upcoming_event_count);
+        console.log(data.url);
+
+        $('img').attr('src', data.thumb_url);
+
+        $('#name').text(data.name);
+        $('#name').attr('href', data.url)
+        $('#fans').text(data.tracker_count);
+        $('#upcomingEvents').text(data.upcoming_event_count);
+
+        $('#tourDates').attr('href', data.url)
+
+        $('#content').removeClass('hidden');
+
+        // image_url: "https://s3.amazonaws.com/bit-photos/large/7598831.jpeg"
+        // mbid: "0743b15a-3c32-48c8-ad58-cb325350befa"
+        // name: "Blink-182"
+        // thumb_url: "https://s3.amazonaws.com/bit-photos/thumb/7598831.jpeg"
+        // tracker_count: 2752584
+        // upcoming_event_count: 1
+        // url
+      })
+    });
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intro to jQuery</title>
+
+  <style type="text/css">
+    .special {
+      width : 400px;
+      height : 400px;
+      background-color : blue;
+      margin : 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div id="one" class="a">dfdf</div>
+
+  <div id="two" class="a">la la la
+    <div id="three">
+      
+    </div>
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    //add class of special to both divs on page
+      //one way
+
+        // document.querySelector('#one').setAttribute('class', 'special')
+
+        // $('#one').attr('class', 'special');
+
+        // $('#two').attr('class', 'special');
+
+      //another way
+      //order does not matter
+      //this will over ride the classes in the element
+        // $('#two, #one').attr('class', 'special');
+
+      //another way
+        // $('div').attr('class', 'special');
+  </script>
+</body>
+</html>

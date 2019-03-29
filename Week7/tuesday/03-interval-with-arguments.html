@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	function alertDouble(a){
+		alert(a*2);
+	}
+
+	// function alertArgPlusHi(a){
+	// 	alert(a+"hi");
+	// }
+
+	//this is wrong
+		// setInterval(alertDouble, 3000);
+
+	//this is wrong
+		// setInterval(alertDouble(3), 3000);
+
+	//this is correct
+		//one way
+			setInterval(function(){
+				alertDouble(3);
+			}, 3000);
+
+		//another way
+			function runAlertDouble(){
+				alertDouble(3);
+			}
+
+			setInterval(runAlertDouble, 3000);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

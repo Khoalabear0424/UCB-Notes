@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p></p>
+
+<script type="text/javascript">
+	var wordToGuess = "apple";
+	var lettersGuessed = ['a','p'];
+	var guessedWord = "";
+
+	//write code here to add the text "a p p _ _" into the paragraph tag above using wordToGuess and lettersGuessed
+
+	for(var x=0; x<wordToGuess.length; x++){
+		if(lettersGuessed.includes(wordToGuess[x])){
+			guessedWord += (wordToGuess[x] + " ");
+			document.querySelector("p").innerText = guessedWord;
+		}else{
+			guessedWord += (" _ ");
+			document.querySelector("p").innerText = guessedWord;
+		}
+	}
+
+	//hint: use a for loop
+</script>
+</body>
+</html>

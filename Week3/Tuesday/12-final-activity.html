@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+        <!-- store your favorite food into a variable
+
+        prompt the user for their favorite food
+        and store that into a variable
+        
+        if the user likes the same type of food you do then alert "me too"
+        
+        if they like vinegar then alert "stop joking"
+        
+        if they don't like your favorite food or vinegar then alert "oh that's nice"
+         -->
+        
+    <script>
+
+        var favFood = prompt('What is your favorite food?');
+
+        var myFavFood = "ramen";
+
+        if( favFood == myFavFood){
+            alert("cool, we like the same type of food!")
+        }else if( favFood == "vinegar"){
+            alert('the fuck is wrong with you')
+        }else{
+            alert('oh, thats nice')
+        }
+
+    </script>
+</body>
+</html>

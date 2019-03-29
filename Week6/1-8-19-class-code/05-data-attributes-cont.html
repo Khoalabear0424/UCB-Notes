@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger Clicked</title>
+</head>
+
+<body>
+    <button class="clickMe" data-live="San Francisco" data-food="pizza">Jason</button>
+    <button class="clickMe" data-live="LA" data-food="burger">Kelly</button>
+    <button class="clickMe" data-live="Oakland" data-food="pasta">Lawrence</button>
+    <button class="clickMe" data-live="Davis" data-food="sandwich">Thadeos</button>
+
+    <input type="text" id="food" placeholder="put your favorite food in">
+
+<!-- Added link to the jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function alertButtonText() {
+	var button = $(this);
+	//this is the value of the input (NOT THE DATA ATTRIBUTE)
+	var food = $('#food').val(); //javascript way: .value
+		
+	//if there's text in the input then update the data attribute
+	if (food){ 
+	//food != "" 
+	//food.length > 0
+		button.attr('data-food', food); //this updates the data attribute value
+	}
+
+	alert(button.attr('data-food'));
+	alert(button.attr('data-live'));
+	alert(button.text());
+	
+}
+
+$('.clickMe').on('click', alertButtonText);
+
+</script>
+</body>
+
+</html>

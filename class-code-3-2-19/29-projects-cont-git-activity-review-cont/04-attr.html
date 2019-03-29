@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.green {
+			color : white;
+			background-color: green;
+			border: 1px solid black;
+		}
+
+		.blue {
+			color : white;
+			background-color: blue;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+
+<p class="green">good bye</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//this will get me whatever the value is inside class attribute of the paragraph
+
+		$('p').attr('class')
+
+	//this will update the class attribute value to the second argument of 'blue'
+		$('p').attr('class', 'blue')
+
+	//this adds an attribute named data-whosaid to the paragarph element and sets it to a value of derek
+		$('p').attr('data-whosaid', 'derek')
+
+
+</script>
+</body>
+</html>
+
+
+
+
+

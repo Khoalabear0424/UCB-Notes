@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Giphy API</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // Example queryURL for Giphy API
+    var queryURL = "https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC";
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response){
+
+      //doing a for loop to loop over all of the image objects from the JSON response
+      for(var i=0; i<response.data.length; i++){
+        var img = $('<img>');
+          //this is going to make a blank image
+            //<img>
+        img.attr('src', response.data[i].images.fixed_width.url)
+          //<img src="https://media1.giphy.com/media/67sjfw4d1k8wyygJJl/200w.gif?cid=e1bb72ff5c4a7bce396952775118f9b8">
+        $('body').prepend(img);
+      }
+    })
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response) {
+    //   for(var i=0; i<response.data.length; i++){
+    //     var img = $('<img>').attr('src', response.data[i].images.downsized_medium.url);
+    //     $('body').append(img);
+
+    //   }
+    // });
+  </script>
+</body>
+</html>

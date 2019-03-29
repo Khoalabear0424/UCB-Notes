@@ -1,0 +1,51 @@
+1. students will go over how to pull all remote branches from github to your computer
+		
+	git fetch
+
+	git checkout <branchNameGoesHere>
+
+2. students will go over how to update their branch with the latest files and changes from the master branch
+	git pull origin master
+
+
+		1. josh is working on branch navbar
+
+		2. nader is working on branch firebase
+
+		3. josh finishes his work
+
+		4. josh makes a pull request to the master branch
+
+		5. his team looks it over, merges it in 
+
+			now master is updated
+
+		6. nader has to now update his firebase branch with the new changes from master
+
+		7. nader needs to update his branch
+
+			he does
+
+				git pull origin master
+
+
+			he fixes any merge conflicts
+
+			commits that and pushes up his branch
+
+			then he continues working on his branch
+
+3. students will go over the pull request process again with the above commands from start to finish
+
+
+
+
+
+
+
+
+
+
+
+
+

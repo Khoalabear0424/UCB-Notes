@@ -1,0 +1,15 @@
+0. students will do a retro on their projects
+
+1. students will use node.js
+
+2. students will learn what node.js is
+
+3. students will learn how to run JavaScript on the back end
+
+this is what front end can't do
+
+	4. students will pass data to files
+
+	5. students will read the contents of a file and use it in their code
+
+	6. students will write data to a file

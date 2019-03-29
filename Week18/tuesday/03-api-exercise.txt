@@ -1,0 +1,7 @@
+make a html file, use jquery 
+
+and hit this route 
+
+https://www.omdbapi.com/?t=x+men&y=&plot=short&apikey=trilogy
+
+and put the results onto the html page

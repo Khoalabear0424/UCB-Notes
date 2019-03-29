@@ -1,0 +1,6 @@
+APP GOAL: Allow users to set a location gym/park nearby and create a habit tracker
+
+- users must be at that location once a day to mark the habit as completed
+- set up will allow users to see nearby parks/gyms and set one or multiple
+- metric tracking
+- user auth

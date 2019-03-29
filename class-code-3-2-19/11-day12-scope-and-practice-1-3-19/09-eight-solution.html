@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<p></p>
+
+<script type="text/javascript">
+	var wordToGuess = "apple";
+	var lettersGuessed = ['a','p'];
+
+	//write code here to add the text "a p p _ _" into the paragraph tag above using wordToGuess and lettersGuessed
+
+	//one way
+		var strToPrint = "";
+
+		for (var i=0; i<wordToGuess.length; i++){
+			//checking if 'a' is in ['a', 'p']
+			if (lettersGuessed.includes(wordToGuess[i])){
+				strToPrint += wordToGuess[i] + " ";
+			}else {
+				strToPrint += "_" + " ";
+			}
+		}
+
+		document.querySelector('p').innerText = strToPrint;
+
+	//another way
+
+		var strToPrint = "";
+
+		for (var i=0; i<wordToGuess.length; i++){
+			//checking if 'a' is in ['a', 'p']
+			if (lettersGuessed.includes(wordToGuess[i])){
+				strToPrint = strToPrint + wordToGuess[i] + " ";
+			}else {
+				strToPrint = strToPrint + "_" + " ";
+			}
+		}
+
+		document.querySelector('p').innerText = strToPrint;
+
+
+</script>
+</body>
+</html>

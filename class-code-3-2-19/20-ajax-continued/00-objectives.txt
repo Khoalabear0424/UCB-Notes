@@ -1,0 +1,7 @@
+1. students will go over the giphy trending exercise
+
+3. students will use a weather api
+
+4. students will use a bands in town api
+
+5. students will create a movie poster app with the omdb api

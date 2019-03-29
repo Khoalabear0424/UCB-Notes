@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var dogs = ["lassy", "grr", "dog", "fido"];
+
+	//problem 1
+		// loop and print out each dog's name
+		for (var i=0; i<dogs.length; i++){
+			console.log(dogs[i]);
+		}
+
+	//problem 2 
+		// loop and print out even numbered indices 
+
+		// 	these are even numbered indices
+		// 		0, 2
+			for (var i=0; i<dogs.length; i=i+2){
+				console.log(dogs[i]);
+			}
+
+	//problem 3
+		//loop and print out the dog names from fido to lassy, so fido is the first one you print 
+
+			//these work only when the dog array has four elements
+				
+				//one way
+					for (var i=3; i>-1; i--){
+						console.log(dogs[i]);
+					}
+
+				//another way
+					for (var counter=3; counter>-1; counter--){
+						console.log(dogs[counter]);
+					}
+
+				//another way
+					for (var i=3; i>=0; i--){
+						console.log(dogs[i]);
+					}
+
+			//this way works whatever the length of the dogs array
+			//another way
+				for (var i=dogs.length-1; i>=0; i--){
+					console.log(dogs[i]);
+				}
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

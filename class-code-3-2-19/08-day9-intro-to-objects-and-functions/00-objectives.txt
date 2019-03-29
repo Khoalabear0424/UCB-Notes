@@ -1,0 +1,4 @@
+1. students will create and update objects
+2. students will make arrays of objects
+3. students will make an object with an array
+4. students will write functions

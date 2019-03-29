@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<button data-age="40">bear</button>
+	<button data-age="60">frog</button>
+	<button data-age="10">hippo</button>
+
+	<input type="text" id="yourAge" placeholder="put your age in">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$('button').on('click', function(){
+			var yourAge = $('#yourAge').val();
+			var animalName = $(this).text();
+
+			var animalAge = $(this).data('age');
+
+			if (!Number.isInteger(yourAge)){
+				alert('please put in a number');
+			}else if (!yourAge){
+				alert('please put your age in');
+			}else if (yourAge < animalAge){
+				alert('you are younger than the ' + animalName);
+			}else if (yourAge == animalAge){
+				alert('you are the same age as the ' + animalName);
+			}else {
+				alert('you are older than the ' + animalName);
+			}
+		});
+		
+	</script>
+</body>
+</html>
+
+

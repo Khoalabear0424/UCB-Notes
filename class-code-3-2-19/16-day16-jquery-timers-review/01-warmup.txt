@@ -1,0 +1,24 @@
+1. write a function that takes a number and returns an array of numbers up to that number
+
+	for example
+
+	1 should return [1]
+
+	5 should return [1,2,3,4,5]
+
+2. write a function that takes a number and determines whether it is prime or not
+	
+	prime numbers are numbers that can only be divided by 1 and 5 without a remainder. Any other number will give a remainder
+
+	5 is prime because it can only be divided by 1 and 5 without a remainder. 
+
+		2,3,4 all divide with 5 but have a remainder.
+
+	4 is not prime because 1,2 and 4 divide into it without a remainder.
+
+3. write a function that takes a number and returns an array of the fibonacci numbers up to that number
+	
+	the fibonacci sequence is as followed
+		1, 1, 2, 3, 5, 8, 13, 21, ....
+
+	your function should work for the number 50 or 100 or 200, etc.

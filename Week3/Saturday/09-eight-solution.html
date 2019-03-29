@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+// make an empty object named panda
+
+// prompt the user for a panda name and add that into the panda object
+
+// prompt the user for hobbies of the panda and add that into the panda object
+
+// prompt the user for favoriteFood of the panda and add that into the panda object
+
+// prompt the user for job of the panda and add that into the panda object
+
+// prompt the user for favoriteMovie of the panda and add that into the panda object
+
+
+var panda = {};
+
+//one way
+	// panda.name = prompt("what is your panda's name");
+	// panda.hobby = prompt("what is your panda's hobby");
+	// panda.favoriteFood = prompt("what is your panda's favorite food");
+	// panda.job = prompt("what is your panda's job");
+	// panda.favoriteMovie = prompt("what is your panda's favorite movie");
+
+	// console.log(panda);
+
+//another way
+	var keysAndQuestions = {
+		name : "what is your panda's name",
+		hobby : "what is your panda's hobby",
+		favoriteFood : "what is your panda's favorite food",
+		job : "what is your panda's job",
+		favoriteMovie : "what is your panda's favorite movie"
+	}
+
+	for (var key in keysAndQuestions){
+		//the reason we don't have quotes around the word key is because key is a variable and so in this particular case we don't put quotes around it, because if we did, then JavaScript would be looking for a key named key in the panda object
+		panda[key] = prompt(keysAndQuestions[key]);
+	}
+
+	console.log(panda);
+
+
+</script>
+</body>
+</html>

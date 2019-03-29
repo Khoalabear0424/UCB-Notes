@@ -1,0 +1,26 @@
+Quiz
+
+2. write the html and css to make two columns out of two divs
+
+CSS:
+.col{
+    float: left;
+}
+
+.clearFloat{
+    clear: left; //or clear: both;
+}
+
+HTML:
+<div id="container"
+    <div class="col"> first </div>
+
+    <div class="col"> second </div>
+    </div>
+
+    <div class="clearFloat"></div>
+
+3. what will this look like
+
+CSS: 
+    

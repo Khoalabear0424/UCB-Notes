@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	Make a new html page, make a script tag
+
+	Make a variable called shirt_cost and set it to 3.5 
+
+	Make another variable called tax_rate and set it to 0.1
+
+	Prompt the user: How many shirts do you want to buy? And store it into a variable named quant_shirts_to_buy
+
+	Then make a variable called cost_pre_tax and set it quant_shirts_to_buy * shirt_cost
+
+	Then make a variable called cost_post_tax and set it to cost_pre_tax + cost_pre_tax*tax_rate
+
+	Then alert cost_post_tax and say you owe this much: 
+<script type="text/javascript">
+	var tax_rate = 0.1;
+	var shirt_cost = 3.5;
+
+	//the value of any prompt is a string always
+
+		//one way
+			var quant_shirts_to_buy = prompt('How many shirts do you want to buy?');
+
+		//another way
+			var quant_shirts_to_buy = parseInt(prompt('How many shirts do you want to buy?'));
+
+		//another way
+			var quant_shirts_to_buy = prompt('How many shirts do you want to buy?');
+
+			quant_shirts_to_buy = parseInt(quant_shirts_to_buy);
+
+
+	var cost_pre_tax = quant_shirts_to_buy * shirt_cost;
+	var cost_post_tax = cost_pre_tax + cost_pre_tax*tax_rate;
+
+	//one way
+		alert(`Your total cost is ${cost_post_tax}`);
+
+	//another way
+		alert(cost_post_tax);
+
+	//another way
+		alert("Your total cost is " + cost_post_tax);
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

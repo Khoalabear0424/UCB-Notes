@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger Clicked</title>
+</head>
+
+<body>
+    <button id="clickMe">CLICK ME!</button>
+
+    <button>1</button>
+
+    <button>2</button>
+
+    <button>3</button>
+    
+    <!-- Added link to the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script type="text/javascript">
+    	//one way
+	    	function alertHi(){
+	    		alert('hi');
+	    	}
+	    	
+	    	//alertHi();
+
+	    	//how we would trigger alertHi, or execute the code inside of it
+	    	// alertHi();
+
+	   $('#clickMe').on('click', alertHi);
+
+	    	//in js
+	    	//document.querySelector('#clickMe').onclick = alertHi;
+
+	    //another way
+
+	    	$('#clickMe').on('click', function(){
+	    		alert('hi');
+	    	});
+
+	    //in JavaScript
+		    var buttons = document.querySelectorAll('button');
+
+		    for (var i=0; i<buttons.length; i++){
+		    	buttons[i].onclick = alertHi;
+		    }
+
+		//in jQuery
+			$('button').on('click', alertHi);
+    </script>
+</body>
+
+
+
+
+
+
+
+
+
+</html>

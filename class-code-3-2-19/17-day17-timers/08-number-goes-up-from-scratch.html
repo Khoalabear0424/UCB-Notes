@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Number Goes Up</h1>
+
+<p></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//way one
+
+		var counter = 0;
+		$('p').text(counter);
+
+		setInterval(function(){
+			counter++;
+			$('p').text(counter);
+		}, 1000)
+
+	//way two
+
+		var counter = 0;
+		$('p').text(counter);
+
+		setInterval(function(){
+			counter = counter + 1;
+			$('p').text(counter);
+		}, 1000)
+
+	//way three
+
+		var counter = 0;
+		$('p').text(counter);
+
+		function addToCounter(){
+			counter = counter + 1;
+			$('p').text(counter);
+		}
+
+		setInterval(addToCounter, 1000)
+
+	//way four
+
+		var counter = 0;
+		$('p').text(counter);
+
+		function addToCounter(){
+			$('p').text(++counter);
+		}
+
+		setInterval(addToCounter, 1000)
+
+	//way five
+		//delayed by one second but still works
+		var counter = -1;
+
+		setInterval(function(){
+			counter++;
+			$('p').text(counter);
+		}, 1000)
+</script>
+</body>
+</html>
+
+
+
+
+
+

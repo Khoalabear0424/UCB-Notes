@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>this</title>
+</head>
+
+<body>
+
+<script type="text/javascript">
+// console.log(this); //it's the window
+
+function sumOfThem(a,b){
+	// debugger; 
+	//the function is executed in the window so this will be the window
+	console.log(this); //this is the window
+	// var a = 1;
+	// var b = 2;
+	return a+b;
+}
+
+alert(sumOfThem(1,2)); //alerts 3 on the page
+
+</script>
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+

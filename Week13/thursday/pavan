@@ -1,0 +1,19 @@
+math.js
+
+    function add
+
+    function subtract
+
+    export add;
+
+    export subtract;
+
+    //alternatively
+        export {add, subtract}
+
+
+use.js
+
+    import {add, subtract} from './math'
+
+    console.log(add(1,2));

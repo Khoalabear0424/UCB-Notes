@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="pbj">pbj</button>
+<button id="gc">grilled cheese</button>
+<button id="ct">cucumber and tomato</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+	var pbjCounter = 0;
+	var gcCounter = 0;
+	var ctCounter = 0;
+
+	$('#pbj').on('click', function(){
+		pbjCounter++;
+		alert(pbjCounter);
+	});
+
+	$('#gc').on('click', function(){
+		gcCounter++;
+		alert(gcCounter);
+	});
+
+	$('#ct').on('click', function(){
+		ctCounter++;
+		alert(ctCounter);
+	});
+</script>
+</body>
+</html>

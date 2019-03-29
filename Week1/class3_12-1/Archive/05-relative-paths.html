@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>relative paths vs absolute paths</title>
+	<style type="text/css">
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+
+<!-- absolute path -->
+<img src="https://i.redd.it/il2c7vtr2afz.jpg">
+
+<!-- pandora.jpg needs to be in the same folder as this html file for these relative paths to work -->
+
+<!-- relative path -->
+<img src="pandora.jpeg">
+
+<!-- relative path -->
+<!-- . means current folder (or directory) -->
+<img src="./pandora.jpeg">
+
+<img src="./images/bob-knight.jpg">
+
+<img src="./images/bowling/bowlers.jpg">
+<img src="/images/bowling/bowlers.jpg">
+
+
+</body>
+</html>

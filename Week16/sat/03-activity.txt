@@ -1,0 +1,17 @@
+activity:
+
+make a table called teachers
+id, name, subject
+
+make a table called students
+id, name, teacher_id
+
+insert 3 records into teachers
+
+insert 6 records into students
+
+write a sql statement that shows all of the students names and their teacher’s names and the subjects their teachers teach
+
+delete 1 record from students using a delete sql query (make sure you use where in your query)
+
+update the teacher_id of a student to another teacher_id using an update sql query (make sure you use where in your query)

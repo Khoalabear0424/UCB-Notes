@@ -1,0 +1,5 @@
+content is text, images, urls
+
+html organizes content in tags
+
+css styles html tags

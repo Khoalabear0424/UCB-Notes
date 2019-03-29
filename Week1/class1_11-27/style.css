@@ -1,0 +1,42 @@
+h1{
+    width: 90%;
+    padding: 16px 16px;
+    margin: auto;
+    text-align: center;
+}
+
+hr{
+    margin: 5px 10px;
+}
+
+.container{
+    padding: 5px 16px;
+    margin: 5px 16px;
+}
+
+img{
+    width: 300px;
+    height: auto;
+}
+
+ul{
+    display: inline-block;
+    width: 100%;
+    float: center;
+}
+
+li{
+    display: inline-block;
+    overflow: hidden;
+    width: 400px;
+    margin: 16px 16px;
+}
+
+li p{
+    width: 200px;
+    text-align: center;
+}
+
+tr{
+    text-align: center;
+}

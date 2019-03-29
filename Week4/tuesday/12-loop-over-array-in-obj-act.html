@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<!-- <form>
+		<input type="number" id="userInput" onkeydown="addTotal()">
+		<button onclick="addTotal()">ADD!</button>
+		<p id="result"> Your new total is: </p>
+	</form> -->
+
+	<script type="text/javascript">
+		var cat = {
+			name: "felix",
+			skills: ["eating", "sleeping", "drinking", "climbing", "opening doors", "chasing birds"]
+		}
+
+		//write a for loop to print out each skill in the skills property of the cat object onto the html page
+
+		for (var x = 0; x < (cat.skills.length); x++) {
+			document.write(cat.skills[x] + "<br>");
+		}
+
+
+		function fact(n) {
+			if (n < 0) {
+				return;
+			}
+			if (n === 1) {
+				return 1;
+			}
+			else {
+				return n + fact(n - 1);
+			}
+		}
+
+		var result = 0;
+		function factAlt(n) {
+			for (var x = 1; x <= n; x++) {
+				result = result + x;
+			}
+			return result;
+			result = 0;		
+		}
+
+	</script>
+</body>
+
+</html>

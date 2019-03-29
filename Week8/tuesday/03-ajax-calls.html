@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Multiple AJAX</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+</head>
+
+<body>
+
+  <table class="table" id="movies">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Year</th>
+        <th scope="col">Actors</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    //OMDB 
+    //code running on a computer somewhere
+
+    //AWS
+
+    //linode
+
+    //digital ocean
+
+    //the code has end points 
+
+    //so if the user goes to a url like this
+
+    //https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy
+
+    //their code will search a database for a movie title of romancing the stone 
+
+    //and convert the result to JSON and send it back
+
+
+
+    // Performing GET requests to the OMDB API and logging the responses to the console
+    var responseArr = [];
+
+    // $.ajax({
+    //   url: "https://www.omdbapi.com/?t=romancing+the+stone&y=&plot=short&apikey=trilogy",
+    //   method: "GET"
+    // }).then(function (response) {
+    //   responseArr.push(response);// 
+    //   console.log(response);
+    //   $('body').text(response.Actors)
+    // });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=the+revenant&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=space+jam&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=boiler+room&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=inception&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    $.ajax({
+      url: "https://www.omdbapi.com/?t=the+dark+night&y=&plot=short&apikey=trilogy",
+      method: "GET"
+    }).then(function (response) {
+      responseArr.push(response);
+      console.log(response);
+    });
+
+    // setTimeout(function () {
+    //   console.log(responseArr.length);
+    //   for (var i = 0; i < responseArr.length; i++) {
+    //     $('body').append(responseArr[i].Title);
+    //   }
+    // },200);
+
+setTimeout(function(){
+  
+    for (var i = 0; i < responseArr.length; i++) {
+      console.log("HELLO");
+      var $row = $('<tr></tr>');
+      var $th = $('<th></th>');
+      var $td1 = $('<td></td>');
+      var $td2 = $('<td></td>');
+      var $td3 = $('<td></td>');
+
+      $td1.text(responseArr[i].Title);
+      $td2.text(responseArr[i].Year);
+      $td3.text(responseArr[i].Actors);
+      $th.addClass('row');
+      $row.append($th);
+      $row.append($td1);
+      $row.append($td2);
+      $row.append($td3);
+      
+      $('#movies tr:last').after($row);
+      
+    }
+},230);
+
+
+
+
+      // for (var i = 0; i < responseArr.length; i++) {
+      //   $('body').text(responseArr[i].Title);
+      // }
+
+
+
+
+// ---------------------------------------------------------
+
+    // console.log("Because our AJAX requests are asynchronous, this line of code will most likely log first");
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+1. What does a doctype do?
+tells the browser which version of html you are using
+
+
+2. What are data- attributes good for?
+gives variables to html elements
+
+
+3. Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+css needs to load before the html does so there is styling applied
+
+
+4. Describe Floats and how they work.
+floats have decimal points
+
+
+5. Describe the box model.
+how the browser sees elements.  it has attributes that changes how the eletn is displayed.  padding for example will move the content away from the border of the element.
+
+
+6. Have you ever used a grid system, and if so, what do you prefer?
+i like the bootstrap col and row system
+
+
+7. Question: What is the value of foo?
+
+	var foo = 10 + '20';
+1020
+
+
+8. Question: What will be the output of the code below?
+
+	console.log(0.1 + 0.2 == 0.3);true 
+
+
+9. Question: Write code to make these work
+
+	add(2, 5); // 7   2+5
+	add(2)(5); // 7   add((2),(5))
+
+
+10. Question: What value is returned from the following statement?
+
+	"i'm a lasagna hog".split("").reverse().join("");
+	hog lasagna a im
+
+
+11. Question: What is the value of window.foo?
+
+	( window.foo || ( window.foo = "bar" ) );
+
+
+
+12. Question: What is the outcome of the two alerts below?
+
+	var foo = "Hello";
+	(function() {
+	  var bar = " World";
+	  alert(foo + bar);
+	})();
+	alert(foo + bar);
+
+
+13. Question: What is the value of foo.length?
+
+	var foo = [];
+	foo.push(1);
+	foo.push(2);
+
+
+14. Question: What is the value of foo.x?
+
+	var foo = {n: 1};
+	var bar = foo;
+	foo.x = foo = {n: 2};
+
+
+15. What's a typical use case for anonymous functions?
+as a callback
+
+16. What is the difference between == and ===?
+equivalent value
+eqquivalent value AND type
+
+17. Make a function! to make this work:
+	
+	duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+
+	function ducplicat(x){
+		return x.push(x.map(function(){return;}))
+	}
+
+
+
+18. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+var sum = 0;
+for (var i = 0; i<1000; i++){
+	if(i%3 == 0 || i%5 ==0){
+		sum += i;
+	}
+}
+
+
+
+19. Write a function that returns n number of even numbers in an array
+function evenNumGen(n){
+	var arrayEven = [];
+for(var i = 0; i< n; i++){
+if(i%2==0){
+	arrayEven.push(i);
+}
+}
+}
+
+	3 would return [0,2,4]
+
+	4 would return [0,2,4,6]
+
+
+20. write a function that will return whether a number is even or odd.
+function evenOrOdd(x){
+	return x%2 == 0 ? "even" : "odd";
+}
+
+

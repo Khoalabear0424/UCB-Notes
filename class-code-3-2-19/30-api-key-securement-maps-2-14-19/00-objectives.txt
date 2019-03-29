@@ -1,0 +1,1 @@
+1. students will learn how to secure their api keys

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// 1. write a function that takes in an array and returns the sum of that array
+
+	//one way
+
+		function sumArray(arr){
+			//var arr = [1,5,7]
+			var sum = 0;
+
+			for (var i=0; i<arr.length; i++){
+				sum = sum + arr[i];
+			}
+
+			return sum;
+		}
+
+		console.log(sumArray([1,5,7])); //13
+
+	//another way
+		function sumArray(arr){
+			//var arr = [1,5,7]
+			return arr.reduce(function(a,b){
+				return a+b;
+			});
+
+			// 1, 5, 7
+			// a  b 
+
+			// 6, 7
+			// a  b
+
+			// 13
+
+		}
+
+		console.log(sumArray([1,5,7])); //13
+
+	// 2. write a function that takes a number and returns whether it's a multiple of 5 or not
+
+		// 7 is not a multiple of 5
+
+		// 10 is a multiple of 5
+
+		// 100 is a multiple of 5
+
+		//one way
+			function multipleFive(r){
+				return r % 5 == 0;
+			}
+		//another way
+			function multipleFive(r){
+				return r/5  == Math.floor(r/5);
+			}
+
+			// 7/5 = 1.4		Math.floor(1.4) = 1
+			// 10/5 = 2.0		Math.floor(2) = 2
+			// 100/5 = 20.0	Math.floor(20) = 20
+			// 11/5 = 2.2		Math.floor(2.2) = 2
+			// 12/5 = 2.4		Math.floor(2.4) = 2
+
+	// 3 write a function that takes a string, reverses it and returns the result
+		function revStr(str){
+			return str.split("").reverse().join("");
+		}
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

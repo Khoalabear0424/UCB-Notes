@@ -1,0 +1,49 @@
+1. explain the box model (drawing would be good)
+	
+	content is a html element
+
+	padding is the space around the element to the border
+
+	border is what surrounds the element, you can specify the width of the border, the pattern (solid, dashed, etc), the color
+
+	margin is the space from the border of the element to other element's borders
+
+2. write the html and css to make two columns out of two divs
+
+	css:
+
+		.col {
+			float: left;
+		}
+
+		.clearFloat {
+			clear: left; //or clear: both;
+		}
+
+	html:
+		
+		<div id="container">
+			<div class="col"> first </div>
+
+			<div class="col"> second </div>
+		</div>
+
+		<div class="clearFloat"></div>
+
+3. what will this look like
+
+	css:
+		div {
+			width: 100px;
+			background-color: red;
+			border: 1px solid blue;
+		}
+
+	html:
+		<div></div>
+
+4. 17*13
+
+5. 451*323
+
+we'll stop and go over it at 6:57

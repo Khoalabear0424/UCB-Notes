@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Movie Search</h1>
+    <div class="buttons">
+    </div>
+
+    <h2>Add a Movie</h2>
+    <input type="text" id="searchBar">
+    <button id="add">Add a Movie!, Yo!</button>
+
+    <div id="movieInfo">
+        <p id="rating"></p>
+        <p id="released"></p>
+        <p id="plot"></p>
+        <img src="#" alt="poster">
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $('img').hide();
+        var $text = '';
+        $('#add').on('click', function () {
+
+            var $butt = $('<button/>',
+                {
+                    text: 'Test',
+                    click: searchMovie,
+                    class: 'btn'
+                });
+                
+
+                
+            var $butt = $('<button></button>');
+            $butt.text('Test');
+            $butt.addClass('btn');
+            $butt.on('click',searchMovie);
+
+
+
+
+            $butt.addClass('search');
+            $text = $('#searchBar').val();
+            $butt.text($text);
+            $('.buttons').append($butt);
+        })
+
+        function searchMovie() {
+            $('img').show();
+            var movie = $(this).text();
+            var queryURL = "https://www.omdbapi.com/?t=" + movie + "&y=&plot=short&apikey=trilogy";
+            $.ajax({
+                url: queryURL,
+                method: "GET"
+            }).then(function (data) {
+                console.log(data);
+
+                $('#movieInfo').slideUp('slow',function(){
+
+                    $('#ratings').text(data.Rated);
+                    $('#released').text(data.Released);
+                    $('#plot').text(data.Plot);
+                    $('img').attr("src", data.Poster);
+
+                    $('#movieInfo').slideDown('slow');
+                })
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

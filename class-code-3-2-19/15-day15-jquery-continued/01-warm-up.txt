@@ -1,0 +1,5 @@
+1. write a function that takes in an array and returns the sum of that array
+
+2. write a function that takes a number and returns whether it's a multiple of 5 or not
+
+3 write a function that takes a string, reverses it and returns the result

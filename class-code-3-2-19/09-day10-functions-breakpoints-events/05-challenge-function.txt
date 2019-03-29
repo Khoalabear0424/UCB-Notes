@@ -1,0 +1,4 @@
+write a function that takes in a number and returns the sum up to that number
+	
+	so 3 would return 6 
+	and 5 would return 15

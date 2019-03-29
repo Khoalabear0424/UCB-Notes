@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Trigger Clicked</title>
+</head>
+
+<body>
+    <button id="clickMe">CLICK ME!</button>
+
+<!-- Added link to the jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+function alertHi() {
+	// debugger;
+	console.log(this); //button we clicked on
+    alert('hi');
+
+    // $(this).hide();
+}
+
+alertHi();
+
+// document.querySelector('#clickMe').onclick = alertHi;
+
+$('#clickMe').on('click', alertHi);
+
+</script>
+</body>
+
+</html>
+
+
+
+
+
+
+

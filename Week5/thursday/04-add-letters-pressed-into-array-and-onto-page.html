@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<p id="target">Hello</p>
+
+<script type="text/javascript">
+
+	var array = [];
+	var alpha = /^[A-Za-z]+$/g;
+
+	var key = document.querySelector("#target");
+	function grabKeyPressed(){
+		if( (!array.includes(event.key)) && alpha.test(event.key) ){
+			array.push(event.key);
+			key.innerHTML=(array);
+		}}
+
+		document.onkeyup = grabKeyPressed;
+
+	// write code so that whenever a letter is pressed, it goes put into an array and the array gets added onto the page
+
+
+
+	// bonus 1: make it so that duplicate characters don't get pushed into the array
+
+	// bonus 2: make it so that only letters can get pushed into the array (ex: a-z)
+</script>
+</body>
+</html>

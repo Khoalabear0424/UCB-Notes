@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Weather API</title>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    // This is our API key
+    var APIKey = "166a433c57516f51dfab1f7edaed8413";
+
+    var city = "San Francisco,California";
+    // Example queryURL for Weather API
+    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=" + APIKey;
+
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response){
+        console.log(response);
+
+        var $h3 = $('<h3></h3>');
+        var $p = $('<p></p>');
+        var temp = ('Temperature : (F) ' + response.main.temp + "<br>");
+        var pressure = ('Pressure : (atm) ' + response.main.pressure + "<br>");
+        var wind = ('Wind Speed : (mph) ' + response.wind.speed + "<br>");
+        $h3.text(response.name)
+        $p.append(temp,pressure,wind);
+        
+        $('body').append($h3,$p);
+    })
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // $.ajax({
+    //   url: queryURL,
+    //   method: "GET"
+    // }).then(function(response) {
+    //   for(var i=0; i<response.data.length; i++){
+    //     var img = $('<img>').attr('src', response.data[i].images.downsized_medium.url);
+    //     $('body').append(img);
+
+    //   }
+    // });
+  </script>
+</body>
+</html>

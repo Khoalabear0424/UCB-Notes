@@ -1,0 +1,100 @@
+1. What does a doctype do?
+
+
+
+2. What are data- attributes good for?
+
+
+
+3. Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+
+
+
+4. Describe Floats and how they work.
+
+
+
+5. Describe the box model.
+
+
+
+6. Have you ever used a grid system, and if so, what do you prefer?
+
+
+
+7. Question: What is the value of foo?
+
+	var foo = 10 + '20';
+
+
+
+8. Question: What will be the output of the code below?
+
+	console.log(0.1 + 0.2 == 0.3);
+
+
+9. Question: Write code to make these work
+
+	add(2, 5); // 7
+	add(2)(5); // 7
+
+
+10. Question: What value is returned from the following statement?
+
+	"i'm a lasagna hog".split("").reverse().join("");
+
+
+11. Question: What is the value of window.foo?
+
+	( window.foo || ( window.foo = "bar" ) );
+
+
+12. Question: What is the outcome of the two alerts below?
+
+	var foo = "Hello";
+	(function() {
+	  var bar = " World";
+	  alert(foo + bar);
+	})();
+	alert(foo + bar);
+
+
+13. Question: What is the value of foo.length?
+
+	var foo = [];
+	foo.push(1);
+	foo.push(2);
+
+
+14. Question: What is the value of foo.x?
+
+	var foo = {n: 1};
+	var bar = foo;
+	foo.x = foo = {n: 2};
+
+
+15. What's a typical use case for anonymous functions?
+
+
+16. What is the difference between == and ===?
+
+
+17. Make this work:
+	
+	duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+
+
+18. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+
+
+19. Write a function that returns n number of even numbers in an array
+
+	3 would return [0,2,4]
+
+	4 woudl return [0,2,4,6]
+
+
+20. write a function that will return whether a number is even or odd.
+
+
+

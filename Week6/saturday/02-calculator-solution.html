@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Calculator</title>
+    <!-- Added a link to Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Jumbotron for Title -->
+<div class="jumbotron">
+    <h1 class="text-center">jQuery Calculator</h1>
+    <h3 class="text-center">Perform basic mathematic operations using the power of jQuery!</h3>
+</div>
+
+<div class="container">
+
+    <div class="row">
+
+      <!-- Calculator Card -->
+      <div class="col-lg-4">
+        <div class="card">
+          <h3 class="card-header">Calculator</h3>
+
+          <div class="card-body">
+            <button class="btn btn-primary number" value="1"><h1>1</h1></button>
+            <button class="btn btn-primary number" value="2"><h1>2</h1></button>
+            <button class="btn btn-primary number" value="3"><h1>3</h1></button>
+            <button class="btn btn-danger operator" value="plus"><h1>+</h1></button>
+            <br><br>
+            <button class="btn btn-primary number" value="4"><h1>4</h1></button>
+            <button class="btn btn-primary number" value="5"><h1>5</h1></button>
+            <button class="btn btn-primary number" value="6"><h1>6</h1></button>
+            <button class="btn btn-danger operator" value="minus"><h1>&minus;</h1></button>
+            <br><br>
+            <button class="btn btn-primary number" value="7"><h1>7</h1></button>
+            <button class="btn btn-primary number" value="8"><h1>8</h1></button>
+            <button class="btn btn-primary number" value="9"><h1>9</h1></button>
+            <button class="btn btn-danger operator" value="times"><h1>&times;</h1></button>
+            <br><br>
+            <button class="btn btn-primary number" value="0"><h1>0</h1></button>
+            <button class="btn btn-danger operator" value="divide"><h1>&divide;</h1></button>
+            <button class="btn btn-danger operator" value="power"><h1>^</h1></button>
+            <button class="btn btn-success equal" value="equals"><h1>=</h1></button>
+            <br><br>
+            <button class="btn btn-dark clear" value="clear"><h1>clear</h1></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Result Card -->
+      <div class="col-lg-6">
+        <div class="card">
+          <h3 class="card-header">Result</h3>
+          <div class="card-body">
+            <p id="first-number"></p>
+            <p id="operator"></p>
+            <p id="second-number"></p>
+            <hr>
+            <p id="result"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Added link to the jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+  var numOne = "";
+  var operator = "";
+  var numTwo = "";
+  var clickedOnEqualButton = false;
+
+  $('button').on('click', function(){
+    //give us access to the html of the current button that was clicked
+      // $(this)
+
+    var buttonText = $(this).text();
+
+    if ($(this).text() == "clear"){
+      $('#result').html("");
+      $('#first-number').html("");
+      $('#second-number').html("");
+      $('#operator').html("");
+
+      numOne = "";
+      operator = "";
+      numTwo = "";
+      clickedOnEqualButton = false;
+
+    }else if ($(this).text() == "="){
+      var result;
+
+      numOne = parseInt(numOne);
+      numTwo = parseInt(numTwo);
+
+      if (operator == 'plus'){
+        result = numOne + numTwo;
+      }else if (operator == 'times'){
+        result = numOne * numTwo;
+      }else if (operator == 'minus'){
+        result = numOne - numTwo;
+      }else if (operator == 'divide'){
+        result = numOne / numTwo;
+      }else if (operator == 'power'){
+        result = Math.pow(numOne,numTwo);
+      }
+
+      $('#result').html(result);
+    }else if(operator != ""){
+      numTwo += buttonText;
+        //alternatively 
+          // numTwo = numTwo + buttonText;
+      $('#second-number').html(numTwo);
+    }else if ($(this).hasClass('number')){
+      numOne += buttonText;
+        //alternatively 
+          // numOne = numOne + buttonText;
+      $('#first-number').html(numOne);
+    }else {
+      operator = $(this).attr('value');
+      $('#operator').html(operator);
+    }
+
+[ 3, 6, 1, 7, 9 ,11, 13 ] , 3 ===>  7
+    
+1 3 6 7 9
+
+find 3
+
+  });
+
+</script>
+
+
+
+</body>
+</html>

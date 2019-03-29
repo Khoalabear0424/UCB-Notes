@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button id="b">click me</button>
+
+<a href="#">click me too</a>
+
+<!-- you should jQuery for all events and ajax calls because it works on every browser and every mobile browser and it's constantly being worked on, and it's been alive for along time. -->
+<!-- https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//one way
+
+		//we're using a named function here
+
+		//this function has no jQuery in it, it's pure JavaScript
+			function sayHi(){
+				alert('hi');
+			}
+
+		//click is an event, and in jQuery events generally go in quotes
+		//this is all jQuery:
+			$('#b').on('click', sayHi);
+
+	//another way
+	
+		//we're using an anonymous function here
+		$('#b').on('click', function(){
+			alert('hi');
+		});
+
+	//click event on a tag
+
+		$('a').on('click', function(){
+			event.preventDefault();
+			alert('I clicked on the link');
+		});
+</script>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>css spec</title>
+	<style type="text/css">
+		p {
+			color : blue;
+			font-size: 30px;
+		}
+
+		#mar {
+			color : red;
+			background-color: black;
+		}
+
+		.buds {
+			background-color : yellow;
+		}
+
+	</style>
+</head>
+<body>
+	<p>Carol</p>
+	<!-- the Mary paragraph will be font color red and it will have a background color of black because an id is more specific than a class -->
+	<p id="mar" class="buds">Mary</p>
+	<p class="buds">Fernando</p>
+	<p class="buds">Justin</p>
+	<p class="buds">Allan</p>
+</body>
+</html>

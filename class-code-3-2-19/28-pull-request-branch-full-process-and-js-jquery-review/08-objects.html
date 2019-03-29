@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var fernando = {
+		name : 'fernando',
+		age: 25,
+		shirtColor: 'black',
+		shoes: 'converse',
+		socks: true
+	};
+
+	//one way
+		console.log(fernando.shirtColor);
+
+	//another way
+		console.log(fernando['shirtColor']);
+
+	//another way BUT IN THIS CASE I HAVE TO USE BRACKETS, I can't use the dot notation
+		var key = 'shirtColor';
+		console.log(fernando[key]);
+
+	//prints an array of the fernando object keys
+		var ks = Object.keys(fernando);
+		console.log(ks);
+
+	//prints an array of the fernando object values
+		var keys = Object.values(fernando);
+		console.log(keys);
+
+	//looping through an object
+		//this prints out all the keys in the fernando object
+			for (var key in fernando){
+				console.log(key);
+			}
+
+		//print out all the values in the fernando object
+			for (var key in fernando){
+				console.log(fernando[key]); 
+					//fernando["name"]
+
+					//fernando["age"]
+			}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

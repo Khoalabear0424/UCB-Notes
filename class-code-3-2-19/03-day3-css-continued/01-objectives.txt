@@ -1,0 +1,4 @@
+1. students will use unix commands to navigate their computer
+2. students will practice the css box model
+3. students will practice floating to make columns
+4. students will use relative paths

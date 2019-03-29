@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<h1>Stop Watch</h1>
+
+<p></p>
+
+<button>stop/play</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var counter = 0;
+	$('p').text(counter);
+
+	var inter = setInterval(addCounterToPage, 1000);
+	var stopped = false;
+
+	function addCounterToPage(){
+		counter++;
+		$('p').text(counter);
+	}
+
+	$('button').on('click', function(){
+		if (stopped == false) {
+			clearInterval(inter);
+			stopped = true;
+		}else if (stopped == true){
+			inter = setInterval(addCounterToPage, 1000);
+			stopped = false;
+		}
+		
+	});
+</script>
+</body>
+</html>

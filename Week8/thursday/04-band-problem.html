@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Band</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous">
+</head>
+
+<body>
+<div class="container text-center">
+    <input type="text" id="artist">
+    <button id="search" class="btn btn-warning">Search</button>
+    <button id="toggle" class="btn btn-danger">Toggle</button>
+
+    <h1 id="artistName"></h1>
+    <img src="#" id="album" style="width:300px; height:300px">
+    <p id="fansTracking"></p>
+    <p id="events"></p>
+    <a href="">See tour dates</a>
+</div>
+	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $('h1').hide()
+    $('img').hide()
+    $('p').hide()
+    $('a').hide()
+
+$('#toggle').on('click',function(){
+    $('img').toggle('slow');
+});
+
+$('#search').on('click',function(){
+
+
+    var name = $('#artist').val();
+    if(name == ""){
+        alert("NO NAME BITCH");
+        return;
+    }
+
+        var queryURL = "https://rest.bandsintown.com/artists/"+ name +"?app_id=codingbootcamp"
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(data){
+        console.log(data);
+
+    $('#artistName').text(data.name);
+    $('#album').attr('src',data.image_url);
+    $('#fansTracking').text(data.tracker_count + " fans tracking this arist");
+    $('#events').text(data.upcoming_event_count + " upcoming events");
+    $('a').attr('href',data.url);
+
+    $('h1').show()
+    $('img').show()
+    $('p').show()
+    $('a').show()
+
+    });
+});
+
+  </script>
+</body>
+</html>
+
+
+

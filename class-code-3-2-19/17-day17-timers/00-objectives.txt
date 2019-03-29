@@ -1,0 +1,5 @@
+1. students will use timers in JavaScript
+
+2. students will use intervals in JavaScript
+
+3. students will build a timer with stop and reset

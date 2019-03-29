@@ -1,0 +1,9 @@
+1. make a folder called branching-exercise-2-5-19
+
+2. go into that folder
+
+3. initialize a git repository
+
+4. run a command to check how many branches you have in the repo
+
+5. run a command to check any remotes you have in the repo

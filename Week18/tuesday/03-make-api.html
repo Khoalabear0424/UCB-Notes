@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <div id="displaySearch">
+        <input type="text" class="movieName">
+        <button id="search">Search Movie</button>
+    </div>
+
+    <div class="display">
+        <h1 id="title"></h1>
+        <h2 id="year"></h2>
+        <h2 id="release"></h2>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script>
+        $('#search').on('click', () => {
+            searchMovie($('.movieName').val());
+        });
+
+        function searchMovie(movieTitle) {
+            var myurl = "https://www.omdbapi.com/?t=" + movieTitle + "&y=&plot=short&apikey=trilogy";
+            $.ajax({
+                url: myurl, success: function (result) {
+                    console.log(result);
+                    $('.display').html(JSON.stringify(result));
+                    // $('#title').append(result.Title);
+                    // $('#year').append(result.Year)
+                    // $('#release').append(result.Released)
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>

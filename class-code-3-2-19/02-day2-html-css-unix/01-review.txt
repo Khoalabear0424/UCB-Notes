@@ -1,0 +1,5 @@
+activity:
+
+make an html page with a table of 3 presidents and their terms, their pictures and links to their wikipedia pages
+
+6:48

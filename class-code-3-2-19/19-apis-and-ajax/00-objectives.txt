@@ -1,0 +1,5 @@
+1. students will practice using the OMDB api
+
+2. students will make an ajax call to the OMDB api
+
+3. students will create html elements with data from the OMDB api

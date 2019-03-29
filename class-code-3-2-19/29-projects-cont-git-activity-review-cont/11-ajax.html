@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<div></div>
+
+<!-- you should jQuery for all events and ajax calls because it works on every browser and every mobile browser and it's constantly being worked on, and it's been alive for along time. -->
+<!-- https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js -->
+
+<!-- https://chrome.google.com/webstore/detail/jsonview/chklaanhfefbnpoihckbnefhakgolnmc -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//everything after the ? are query parameters
+
+		//you need a ? first for the first query parameter
+
+		//every query parameter after that starts with an &
+	$.ajax({
+	  url: "https://www.omdbapi.com/?t=lion+king&plot=short&apikey=trilogy",
+	  method: "GET"
+	}).then(function(response) {
+		//whatever comes up when we go in the browser to https://www.omdbapi.com/?t=god+father&y=&plot=short&apikey=trilogy, is what we get in response
+	  $('div').append("<p>" + response.Title + "</p>");
+	  $('div').append("<p>" + response.Actors + "</p>");
+	  
+	  var img = $("<img>"); //<img></img>
+
+	  img.attr('src', response.Poster);
+
+	  $('div').append(img);
+
+	});
+</script>
+</body>
+</html>
+
+
+
+
+

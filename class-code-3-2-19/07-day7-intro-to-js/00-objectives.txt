@@ -1,0 +1,13 @@
+1. students will practice creating and using variables
+
+2. students will use strings, numbers and booleans
+
+3. students will determine the value of conditions
+
+4. students will use control flow 
+	
+	another way of saying control flow is
+
+		if, else if, else statements
+
+5. students will use prompt to grab input from the user

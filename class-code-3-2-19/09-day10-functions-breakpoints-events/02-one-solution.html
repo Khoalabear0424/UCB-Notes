@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	var cat = {
+		name : "felix",
+		skills: ["eating", "sleeping", "drinking", "climbing", "opening doors", "chasing birds"]
+	}
+
+	//one way
+		for (var i=0; i<cat.skills.length; i++){
+			document.write(cat.skills[i]);
+			document.write("<br>");
+		}
+
+	//another way
+		for (var i in cat.skills){
+			document.write(cat.skills[i]);
+			document.write("<br>");
+		}
+
+		/*
+			["eating", "sleeping", "drinking", "climbing", "opening doors", "chasing birds"]
+			
+				0 => "eating"
+				1 => "sleeping"
+				2 => "drinking"
+				3 => "climbing"
+				4 => "opening doors"
+				5 => "chasing birds"
+		*/
+
+	//write a for loop to print out each skill in the skills property of the cat object onto the html page
+</script>
+</body>
+</html>

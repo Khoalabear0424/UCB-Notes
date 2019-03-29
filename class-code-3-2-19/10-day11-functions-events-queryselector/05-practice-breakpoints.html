@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// make a variable called counter and set it to 0.
+	var counter = 0;
+
+	debugger;
+
+	// display the counter value onto the page
+	
+	// write code so that if a vowel is pressed on the keyboard, the counter goes up
+
+	//one way
+		// function vowelIncrementor(){
+		// 	// console.log(event)
+		// 	debugger;
+		// 	var k = event.key;
+
+		// 	if ((k == 'a') || (k == 'e') || (k == 'i') || (k == 'o') || (k == 'u')){
+		// 		debugger;
+
+		// 		counter++;
+		// 		console.log(counter);
+		// 		console.log(k);
+		// 		// document.write(counter);
+		// 	}
+		// }
+
+	//another way
+		function vowelIncrementor(){
+			// console.log(event)
+			var k = event.key;
+			var vowels = ['a', 'e', 'i', 'o', 'u'];
+
+			debugger;
+
+			if (vowels.includes(k)){
+				debugger;
+
+				counter++;
+				console.log(counter);
+				console.log(k);
+				// document.write(counter);
+
+			}else {
+				debugger;
+
+				console.log(k + ' is not a vowel');
+			}
+		}
+
+	//this line right here is what makes the word event work inside vowelIncrementor
+	document.onkeypress = vowelIncrementor;
+
+		// and then display the new value of the counter onto the page
+</script>
+</body>
+</html>
+
+
+
+

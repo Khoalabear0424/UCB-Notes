@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// 1. write a function that takes a number and returns true if it's less than 2 and false otherwise
+	function lessThanTwo(a){
+		return a<2;
+	}
+
+	// 2. write a function that takes a string and returns the fourth character in it, if there is less than 4 characters in the string, return false
+
+		//one way
+			function fourthChar(a){
+				if (a.length < 4) return false;
+				else return a[3];
+			}
+
+		//another way
+			function fourthChar(a){
+				if (a.length < 4) return false;
+				
+				return a[3];
+			}
+
+		//another way
+			function fourthChar(a){
+				if (a.length >= 4) return a[3];
+				else return false;
+			}
+
+		//another way
+			function fourthChar(a){
+				if (a.length >= 4) return a.charAt(3);
+				else return false;
+			}
+
+		//another way
+			function fourthChar(a){
+				if (a[3] == undefined) return false;
+				else return a[3];
+			}
+
+	// 3. write a function that takes a number and returns true if it's 0 and false otherwise
+		//one way
+			function isZero(a){
+				if (a===0) return true;
+				else return false;
+			}
+		//another way
+			function isZero(a){
+				return a===0;
+			}
+
+	// 4. write a function that returns the last character of a string passed in
+
+		//one way
+			function lastChar(str){
+				return str[str.length-1];
+			}
+
+		//another way
+			function lastChar(str){
+				return str.charAt(str.length-1);
+			}
+
+	// 5. write a function that takes two numbers, divides them and returns the result
+		function divideTwo(a,b){
+			return a/b;
+		}
+
+	//6. write a function that takes a string and returns the third and fifth letters as a string
+		//one way
+			function thirdAndFifthChars(str){
+				return str[2] + str[4];
+			}
+		//another way
+			function thirdAndFifthChars(str){
+				return str.charAt(2) + str.charAt(4);
+			}
+
+	// test all the functions you write in the console
+</script>
+</body>
+</html>
+
+
+
+
+

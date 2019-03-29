@@ -1,0 +1,18 @@
+1. students will use push in firebase
+
+2. students will detect someone's presence on a page using firebase
+
+3. students will push to nodes within firebase
+
+4. students will brainstorm ideas for their first project
+
+5. students will explore APIs for their first project
+
+6. students will fill out a survey to help determine their groups for the first project
+
+relevant links
+
+	https://stackoverflow.com/questions/46798981/firestore-how-to-get-random-documents-in-a-collection/46801925#46801925
+
+	https://firebase.google.com/docs/database/web/offline-capabilities#section-connection-state
+

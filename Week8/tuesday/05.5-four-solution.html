@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<body>
+		<input id="a" type="text" class="form-control" placeholder="Enter a Movie Title">
+		<button type="submit" onclick="addMovieRow()" class="btn btn-primary">Submit</button>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Movie Name</th>
+				<th>Year</th>
+				<th>Actors</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+
+
+https://giphy.com/gifs/lifetimetv-abs-lifetime-american-beauty-star-37q1LNqjcn5b4mHVhN?utm_source=media-link&utm_medium=landing&utm_campaign=Media%20Links&utm_term=https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC
+	function addMovieRow(m){
+		$.ajax({
+		  url: "https://www.omdbapi.com/?t=" + m + "&y=&plot=short&apikey=trilogy",
+		  method: "GET"
+		}).then(function(response) {
+			var tr = $('<tr>');
+
+				var tdm = $('<td>').text(response.Title);
+				var tdy = $('<td>').text(response.Year);
+				var tda = $('<td>').text(response.Actors);
+
+			tr.append(tdm, tdy, tda);
+			$('tbody').append(tr);
+		});
+	}
+
+	addMovieRow('inception');
+	addMovieRow('lion king');
+	addMovieRow('mr nobody');
+	addMovieRow('home alone');
+	addMovieRow('home alone 2');
+	addMovieRow('alien');
+
+	
+
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+

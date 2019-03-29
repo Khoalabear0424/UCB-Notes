@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+// make an empty object named panda
+
+// prompt the user for a panda name and add that into the panda object
+
+// prompt the user for hobbies of the panda and add that into the panda object
+
+// prompt the user for favoriteFood of the panda and add that into the panda object
+
+// prompt the user for job of the panda and add that into the panda object
+
+// prompt the user for favoriteMovie of the panda and add that into the panda object
+
+var panda = {};
+
+panda.name = prompt(`What is the panda's name?`);
+panda.hobbies = prompt(`What is the panda's hobby?`);
+panda.favoriteFood = prompt(`What is the panda's favorite food?`);
+panda.job = prompt(`What does the panda do for a living?`);
+panda.favoriteMovie = prompt(`What is the panda's favorite movie`);
+
+
+console.log(panda);
+for( key in panda){
+	document.write(key + ": " + panda[key] + "<br>");
+}
+
+
+</script>
+</body>
+</html>

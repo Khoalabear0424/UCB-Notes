@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>Draw GeoJSON points</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 50%;
+    }
+
+    #form {
+    	float: right;
+    	width: 50%;
+    }
+
+    input {
+    	width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div id='map'></div>
+        <div id="form">
+            <form>
+                <input type="text" id="title" placeholder="what title would you like for your point?">
+
+                <input type="text" id="address" placeholder="what is the address you would like to add to the map?">
+                <p>choose your icon for your coordinate</p>
+                <select id="icon">
+                    <option value="airfield"> airfield </option>
+                    <option value="airport"> airport </option>
+                    <option value="shop"> shop </option>
+                    <option value="park"> park </option>
+                    <option value="aquarium"> aquarium </option>
+                    <option value="gallery"> gallery </option>
+                    <option value="attraction"> attraction </option>
+                    <option value="bakery"> bakery </option>
+                    <option value="bank"> bank </option>
+                    <option value="bar"> bar </option>
+                    <option value="beer"> beer </option>
+                    <option value="bicycle"> bicycle </option>
+                    <option value="share"> share </option>
+                    <option value="bus"> bus </option>
+                    <option value="cafe"> cafe </option>
+                    <option value="campsite"> campsite </option>
+                    <option value="car"> car </option>
+                    <option value="castle"> castle </option>
+                    <option value="cemetery"> cemetery </option>
+                    <option value="cinema"> cinema </option>
+                    <option value="circle"> circle </option>
+                    <option value="stroked"> stroked </option>
+                    <option value="store"> store </option>
+                    <option value="college"> college </option>
+                    <option value="dentist"> dentist </option>
+                    <option value="doctor"> doctor </option>
+                    <option value="water"> water </option>
+                    <option value="embassy"> embassy </option>
+                    <option value="entrance"> entrance </option>
+                    <option value="food"> food </option>
+                    <option value="ferry"> ferry </option>
+                    <option value="station"> station </option>
+                    <option value="fuel"> fuel </option>
+                    <option value="garden"> garden </option>
+                    <option value="golf"> golf </option>
+                    <option value="grocery"> grocery </option>
+                    <option value="harbor"> harbor </option>
+                    <option value="heliport"> heliport </option>
+                    <option value="hospital"> hospital </option>
+                    <option value="cream"> cream </option>
+                    <option value="information"> information </option>
+                    <option value="laundry"> laundry </option>
+                    <option value="library"> library </option>
+                    <option value="lodging"> lodging </option>
+                    <option value="marker"> marker </option>
+                    <option value="monument"> monument </option>
+                    <option value="motorwa"> motorwa </option>
+                    <option value="mountain"> mountain </option>
+                    <option value="museum"> museum </option>
+                    <option value="music"> music </option>
+                    <option value="pharmacy"> pharmacy </option>
+                    <option value="site"> site </option>
+                    <option value="worship"> worship </option>
+                    <option value="playground"> playground </option>
+                    <option value="police"> police </option>
+                    <option value="post"> post </option>
+                    <option value="prison"> prison </option>
+                    <option value="rail"> rail </option>
+                    <option value="light"> light </option>
+                    <option value="metro"> metro </option>
+                    <option value="christian"> christian </option>
+                    <option value="jewish"> jewish </option>
+                    <option value="muslim"> muslim </option>
+                    <option value="restaurant"> restaurant </option>
+                    <option value="rocket"> rocket </option>
+                    <option value="school"> school </option>
+                    <option value="stadium"> stadium </option>
+                    <option value="star"> star </option>
+                    <option value="suitcase"> suitcase </option>
+                    <option value="swimming"> swimming </option>
+                    <option value="theatre"> theatre </option>
+                    <option value="toilet"> toilet </option>
+                    <option value="hall"> hall </option>
+                    <option value="triangle"> triangle </option>
+                    <option value="veterinary"> veterinary </option>
+                    <option value="volcano"> volcano </option>
+                    <option value="w"> w </option>
+                    <option value="zoo"> zoo </option>
+                </select>
+                <button>submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	
+  	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <script>
+
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBX3WUHQGHAzSaBvrlFH_EY_8HHzF2jLRU",
+      authDomain: "first-project-7361b.firebaseapp.com",
+      databaseURL: "https://first-project-7361b.firebaseio.com",
+      projectId: "first-project-7361b",
+      storageBucket: "first-project-7361b.appspot.com",
+      messagingSenderId: "649112347031"
+    };
+
+
+    firebase.initializeApp(config);
+
+    var dataRef = firebase.database();
+
+
+    dataRef.ref('points').on("child_added", function(childSnapshot) {
+
+    	map.addLayer({
+    	    "id": "points" + Math.random(),
+    	    "type": "symbol",
+    	    "source": {
+    	        "type": "geojson",
+    	        "data": {
+    	            "type": "FeatureCollection",
+    	            "features": [childSnapshot.val()]
+    	        }
+    	    },
+    	    "layout": {
+    	        "icon-image": "{icon}-15",
+    	        "text-field": "{title}",
+    	        "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+    	        "text-offset": [0, 0.6],
+    	        "text-anchor": "top"
+    	    }
+    	});
+    });
+
+
+    //get list of custom icons names for map box here
+    	//https://github.com/mapbox/mapbox-gl-styles/tree/master/sprites/bright-v9/_svg
+    var sanFranciscoCoords = [-122.414807, 37.786519];
+    var dalyCityCoords = [-122.47301, 37.691105];
+    var oaklandCoords = [-122.272781, 37.805401];
+
+    //15 San Marin Dr, Novato, CA 94945
+
+    //not using but you can if you'd like
+
+    var arr = ["airfield", "airport", "shop", "park", "aquarium", "gallery", "attraction", "bakery", "bank", "bar", "beer", "bicycle", "share", "bus", "cafe", "campsite", "car", "castle", "cemetery", "cinema", "circle", "stroked", "store", "college", "dentist", "doctor", "water", "embassy", "entrance", "food", "ferry", "station", "fuel", "garden", "golf", "grocery", "harbor", "heliport", "hospital", "cream", "information", "laundry", "library", "lodging", "marker", "monument", "motorwa", "mountain", "museum", "music", "pharmacy", "site", "worship", "playground", "police", "post", "prison", "rail", "light", "metro", "christian", "jewish", "muslim", "restaurant", "rocket", "school", "stadium", "star", "suitcase", "swimming", "theatre", "toilet", "hall", "triangle", "veterinary", "volcano", "w", "zoo"];
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoicGF2YW5rYXQiLCJhIjoiY2pzNWhucGQ5MDVydDQ1bzlxdGsxcnI2dSJ9.-80x6n_ZIYkTXJT4W7g1CQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/light-v9',
+        center: sanFranciscoCoords,
+        zoom: 10
+    });
+
+    var features = [{
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": sanFranciscoCoords
+            },
+            "properties": {
+                "title": "San Francisco",
+                "icon": "monument"
+            }
+        }, {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": dalyCityCoords
+            },
+            "properties": {
+                "title": "Daly City",
+                "icon": "harbor"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": oaklandCoords
+            },
+            "properties": {
+                "title": "Oakland",
+                "icon": "volcano"
+            }
+        },
+        // {"type":"Feature","geometry":{"type":"Point","coordinates":[-122.61054,38.120059]},"properties":{"title":"15 San Marin Dr, Novato, CA 94945","icon":"school"}}
+    ];
+
+	map.on('load', function() {
+
+	    map.addLayer({
+	        "id": "points",
+	        "type": "symbol",
+	        "source": {
+	            "type": "geojson",
+	            "data": {
+	                "type": "FeatureCollection",
+	                "features": features
+	            }
+	        },
+	        "layout": {
+	            "icon-image": "{icon}-15",
+	            "text-field": "{title}",
+	            "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+	            "text-offset": [0, 0.6],
+	            "text-anchor": "top"
+	        }
+	    });
+	});
+
+    $('button').on('click', function() {
+        event.preventDefault();
+        var originalAddress = $('#address').val();
+        var icon = $('#icon').val();
+        var title = $('#title').val();
+
+        /*
+        	notes
+
+	        var word = "hello there charles dickens"
+
+	        word.replace(/ /g, '%20')
+
+	        "hello%20there%20charles%20dickens"
+		*/
+
+        var formattedAddress = originalAddress.replace(/ /g, '%20');
+
+        var u = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + formattedAddress + ".json?access_token=pk.eyJ1IjoicGF2YW5rYXQiLCJhIjoiY2pzNWhucGQ5MDVydDQ1bzlxdGsxcnI2dSJ9.-80x6n_ZIYkTXJT4W7g1CQ";
+
+        $.ajax({
+            url: u,
+            method: 'GET'
+        }).then(function(response) {
+            var geocoords = response.features[0].center;
+
+            var ob = {
+                "type": "Feature",
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": geocoords
+                },
+                "properties": {
+                    "title": title,
+                    "icon": icon
+                }
+            }
+
+            dataRef.ref('points').push(ob);
+
+            map.addLayer({
+                "id": "points" + Math.random(),
+                "type": "symbol",
+                "source": {
+                    "type": "geojson",
+                    "data": {
+                        "type": "FeatureCollection",
+                        "features": [ob]
+                    }
+                },
+                "layout": {
+                    "icon-image": "{icon}-15",
+                    "text-field": "{title}",
+                    "text-font": ["Open Sans Semibold", "Arial Unicode MS Bold"],
+                    "text-offset": [0, 0.6],
+                    "text-anchor": "top"
+                }
+            });
+
+        })
+
+
+    });
+    </script>
+</body>
+
+</html>

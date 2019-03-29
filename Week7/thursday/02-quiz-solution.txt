@@ -1,0 +1,330 @@
+1. What does a doctype do?
+
+	which version of html you're using
+
+	and you can set it to use the latest version of html
+
+2. What are data- attributes good for?
+
+	tying data to html elements
+
+		so when users interact with html elements, the JavaScript will know extra information about those elements
+
+3. Why is it generally a good idea to position CSS <link>s between <head></head> and JS <script>s just before </body>? Do you know any exceptions?
+
+	there's a top down approach with the loading
+
+		so start styling before hand so that when the users see the elements, they're already styled
+
+		and samething with the JavaScript,
+
+			you load the html first and then you load the JS 
+
+				because the JS will most likely depend on the html being there
+
+	exceptions are
+
+		if you use document.ready then you can put the js essentially wherever you want but it's always good to be consistent with where you put things
+
+
+4. Describe Floats and how they work.
+
+	you can float elements to the left or right 
+
+		and if you float to the left
+
+			then it'll take the elements, whether they are block, inline or inline-block and push them as far left as they can go based on their width
+
+5. Describe the box model.
+
+	you have the margin on the outside of the element, you have a border around the element, you have padding within the border and around the element, and of course you have the element itself which is the content 
+
+
+
+6. Have you ever used a grid system, and if so, what do you prefer?
+
+	I've used the bootstrap grid system, and I prefer it.
+
+		so when you use materialize or another grid system, you'll be able to articulate the benefits and differences and why you like one over the other 
+
+
+7. Question: What is the value of foo?
+
+	var foo = 10 + '20';
+
+		"1020"
+
+8. Question: What will be the output of the code below?
+
+	console.log(0.1 + 0.2 == 0.3);
+
+		console.log(0.1 + 0.2 == 0.3);
+		false
+
+		0.1+0.2
+		0.30000000000000004
+		
+		0.1+0.2==0.3
+		false
+		
+		(0.1+0.2)==0.3
+		false
+
+9. Question: Write code to make these work
+
+	add(2, 5); // 7
+	add(2)(5); // 7
+
+	function add(a, b){
+		return a+b;
+	}
+
+	function add(a){ // a is 2
+		return function(b){ //b is 5
+			return a+b;
+		}
+	}
+
+
+
+10. Question: What value is returned from the following statement?
+
+	"i'm a lasagna hog".split("").reverse().join("");
+
+		"goh angasal a m'i"
+
+
+		"i'm a lasagna hog".split("")
+			
+			["i", "'", "m", " ", "a", " ", "l", "a", "s", "a", "g", "n", "a", " ", "h", "o", "g"]
+
+		['a','b','c'].join("")
+		"abc"
+
+11. Question: What is the value of window.foo?
+
+	( window.foo || ( window.foo = "bar" ) );
+
+		"bar"
+
+
+12. Question: What is the outcome of the two alerts below?
+
+	var foo = "Hello";
+	(function() {
+	  var bar = " World";
+	  alert(foo + bar); // "Hello World"
+	})();
+
+	alert(foo + bar);
+		//VM264:6 Uncaught ReferenceError: bar is not defined at <anonymous>:6:14
+
+12.5. Question: What is the outcome of the two alerts below?
+
+	var foo = "Hello";
+	var bar;
+	(function() {
+	  var bar = " World";
+	  alert(foo + bar); // "Hello World"
+	})();
+
+	alert(foo + bar); // Helloundefined
+		
+
+
+13. Question: What is the value of foo.length?
+
+	var foo = [];
+	foo.push(1);
+	foo.push(2);
+
+		2
+
+14. Question: What is the value of foo.x?
+
+	var foo = {n: 1};
+	var bar = foo;
+	foo.x = foo = {n: 2};
+
+		{
+			n: 1, 
+			x: {
+				n: 2
+			}
+		}
+
+15. What's a typical use case for anonymous functions?
+
+	click events, setTimeout, setInterval, onKeyup
+
+		just a side note: YOU CAN USE named functions here too, but if you're using a function once and only once, then that's where you use anonymous functions
+
+16. What is the difference between == and ===?
+
+	double is comparison of value
+
+	triple is comparison of value and data type
+
+	a = 2
+		this is assignment, we're putting 2 into the variable a
+
+	2 == "2" 
+		true
+
+	2 === "2"
+		false
+
+17. Make this work:
+	
+	duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+
+		solution
+
+			function duplicate(arr){
+				var arr_two = arr.slice(0); //[1,2,3,4,5]
+
+				return arr_two.concat(arr);
+			}
+
+		another solution
+
+			function duplicate(arr){
+				return arr.concat(arr);
+			}
+			
+	
+		wrong
+
+			function duplicate(arr){
+				var arr_two = [];
+				arr_two.push(arr);
+				arr_two.push(arr);
+				return arr_two;
+			}
+			
+			duplicate([1,2,3,4,5])
+				
+				[Array(5), Array(5)]
+
+		example
+			var a = [1,2]
+			
+			var b = a;
+			
+			//b is not a clone of a
+			
+			//b is actually a
+			
+			a.push(3)
+			
+			a
+				[1, 2, 3]
+			b
+				[1, 2, 3]
+			b.push(4)
+				
+			b
+				[1, 2, 3, 4]
+			a
+				[1, 2, 3, 4]
+		example
+			var a = [1,2]
+			
+			var b = [1,2]
+			
+			var c = a + b;
+			
+			c
+			"1,21,2"
+
+		another example
+			var a = [1,2]
+			
+			var b = [1,2]
+
+			c = a + "," + b
+			"1,2,1,2"
+
+			c.split(',')
+			(4) ["1", "2", "1", "2"]
+
+		another one
+			var hege = ["Cecilie", "Lone"];
+			var stale = ["Emil", "Tobias", "Linus"];
+			var children = hege.concat(stale);
+
+18. If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. Find the sum of all the multiples of 3 or 5 below 1000.
+	
+	var sum = 0;
+	for (var i=1; i<1000; i++){
+		if ((i % 3 == 0) || (i % 5 == 0)){
+			sum += i;
+		}
+	}
+
+	console.log(sum);
+
+	another way with a function
+
+		function sumOfMultiplesUpTo(a,b,upTo){
+			var sum = 0;
+			for (var i=1; i<upTo; i++){
+				if ((i % a == 0) || (i % b == 0)){
+					sum += i;
+				}
+			}
+			return sum;
+		}
+
+	example
+
+		10/2
+			5
+		
+		10%2
+			0
+		
+		10/3
+			3.3333333333333335
+		
+		10 % 3
+			1
+		
+		(10 % 3 == 0)
+			false
+		
+		(10 % 2 == 0)
+			true
+
+
+19. Write a function that returns n number of even numbers in an array
+
+	3 would return [0,2,4]
+
+	4 would return [0,2,4,6]
+
+		function nEvenArr(a){
+			var arr = [];
+			var counter = 0;
+			while (arr.length != a){
+				if (counter % 2 == 0){
+					arr.push(counter);
+				}
+				counter++;
+			}
+			return arr;
+		}
+
+
+20. write a function that will return whether a number is even or odd.
+
+	function isEven(a){
+		return a % 2 == 0;
+	}
+
+
+
+
+
+
+

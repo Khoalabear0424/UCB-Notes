@@ -1,0 +1,49 @@
+1. go back to the previous folder
+	cd <theFolderNamePath>
+2. make a file called README.txt
+	touch README.txt
+3. put your name into it
+	
+4. save the file
+
+5. commit this 
+
+	keep in mind you can't push this up because there are no remotes to push up to
+
+	git add .
+	git commit -m 'added my name'
+
+6. make a new branch called mypartner
+	
+	git checkout -b mypartner
+
+7. switch to it
+
+	git branch 
+		to check
+
+	git checkout mypartner
+
+8. in the README.txt file on the next line add your partner's name
+
+9. commit this change
+
+	git add .
+	git commit -m 'added partner name'
+
+10. switch back to the master branch
+	
+	git checkout master
+
+11. look at the README.txt file 
+
+	it should only have your name in it
+
+12. switch to the mypartner branch
+
+	git checkout mypartner
+
+13. look at the README.txt file 
+	
+	it should your name and your partner's name in it both
+

@@ -1,0 +1,5 @@
+https://rest.bandsintown.com/artists/blink+182?app_id=codingbootcamp
+
+the name of the band should link to the bandsintown band page
+
+see tour dates should link to the bandsintown band page as well

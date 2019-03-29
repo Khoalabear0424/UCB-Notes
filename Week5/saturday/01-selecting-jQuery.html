@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Intro to jQuery</title>
+</head>
+<body>
+
+  <div id="container"></div>
+
+  <div id="anotherContainer"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+
+    document.querySelector('#container').innerText = '<p>hello</p>';
+
+    $('#container').text('hello');
+
+
+    document.querySelector('#container').innerHTML = '<p><b>hi</b></p>';
+    
+    $('#anotherContainer').html('<p><b>hi</b></p>');
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+

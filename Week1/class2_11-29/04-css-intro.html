@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CSS Intro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+
+    <style type="text/css">
+
+        body{
+            margin: auto;
+        }
+
+        #bigBox{
+            margin: auto;
+            width: 100%;
+            text-align: center;
+        }
+
+        .column{
+            display: inline-block;
+            border: 2px solid blue;
+        }
+
+        p {
+            font-size: 30px;
+            color: blue;
+            transition: all 3.5s;
+            margin: 0;
+            border-radius: 30px;
+            padding: 5px;
+            display: inline-block;
+            border: 1px solid red;
+            margin: 10px;
+        }
+
+        .oakland {
+            background-color: blue;
+        }
+
+        .hasCar {
+            background-color: yellow;
+        }
+
+        #joe {
+            background-color: red;
+        }
+
+        p:hover {
+            color: red;
+            font-size: 80px;
+            transition: all 1.0s;
+            background-color: pink;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="bigBox">
+    <div class="column"> 
+        <p>today is nov 29</p><br>
+        <p class="hasCar oakland">tomororw is nov 30</p>
+    </div>
+
+    <div class="column"> 
+        <p>today is nov 29</p><br>
+        <p class="hasCar oakland">tomororw is nov 30</p>
+    </div>
+
+    <div class="column"> 
+        <p>today is nov 29</p><br>
+        <p class="hasCar oakland">tomororw is nov 30</p>
+    </div>
+</div>
+</body>
+
+</html>

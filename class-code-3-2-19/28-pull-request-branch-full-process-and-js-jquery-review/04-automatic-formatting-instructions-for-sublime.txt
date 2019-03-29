@@ -1,0 +1,33 @@
+on sublime
+	on windows cmd is ctrl
+
+
+	1. cmd + shift + p
+
+	2. type this in 
+		install
+
+	3. press enter
+
+	4. cmd + shift + p
+
+	5. html pretty
+
+	6. press enter
+
+	7. anytime you want to run it
+
+		cmd + shift + p
+
+		type 
+
+			html pretty 
+
+		press enter
+
+from joe
+	in vs code you have the ability to right click to auto-format document.
+
+	Additionally if you select any tag in your html, it will highlight the closing tag. This can be helpful for making sure your code is complete
+
+

@@ -1,0 +1,100 @@
+what is MySQL
+
+	it's a program
+
+		like Microsoft Word
+
+	you need to have a program running to be able to use it 
+
+		you double click on Microsoft Word to use it
+
+			Microsoft Word runs on a port on your computer
+
+				for ports on your computer, you can only have one program running on it at a time
+
+		for MySQL you run it from the terminal (mac, linux) or on windows, you double click on the mysql.exe file or you double click on MAMP and click start servers
+
+	but what kind of program is it?
+
+		it's a database
+
+			and what's a database
+
+				it's a program that let's you store data and retrieve data
+
+				we used one already, 
+					firebase 
+
+	why should we use MySQL
+
+		it's structured
+
+			because of that structure, you can do very complex queries in a few lines of code
+
+	compare MySQL to Firebase to the fs package
+
+		when should we use the fs package?
+
+			making a csv 
+				name,email
+				haven,haven@haven.com
+				juthika,juthika@juthika.com
+
+			make a json file 
+
+			make a log file 
+				you console log a lot of stuff
+
+					instead of console logging, what you can do is write to a file called node.txt
+
+		when should we use firebase?
+
+			when we don't need any reporting
+
+			your budget is 0
+
+			you're working on a mobile app and you're trying to keep costs low
+
+			something realtime 
+
+			only care about the frontend experience
+
+		when should you use MySQL
+
+			when you care about reporting
+
+			when there are clear relationships in your data
+
+				let's say you have users that sign up to your website
+
+				and you have posts that they can make
+
+				you need to associate the users to the posts 
+
+
+when you delete a record in MySQL
+
+	does everything shift up?
+
+		In excel that's the case
+
+		in MySQL that's not the case
+
+			so once you give an id to a record in a MySQL table, that's the id for life
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+

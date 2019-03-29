@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+
+    <script>
+//     make a Pokemon constructor function that makes an object 
+
+// with 3 keys in it
+//        name, hp, attacks 
+// name is a string
+
+// hp is a number
+
+// attacks is an array of attacks
+
+function Pokemon(name, hp, attacks){
+    this.name = name;
+    this.hp = hp;
+    this.attacks = attacks;
+}
+
+// add an attack function to the prototype of the pokemon constructor function that chooses a random attack from the pokemon's attacks property and console logs it
+
+    Pokemon.prototype.attack = function(){
+        var randomNum = Math.floor(Math.random()*this.attacks.length);
+        console.log(this.attacks[randomNum]);
+    }
+
+// make another constructor function called Pikachu, in addition to everything in the Pokemon constructor function, it has a property called voltage which is a number
+
+    // connect the Pokemon constructor function to the Pikachu constructor function 
+
+function Pikachu(voltage, name, hp, attacks){
+    this.voltage = voltage;
+    Pokemon.call(this, name, hp, attacks)
+}
+
+// make two Pikachu objects and console log their name, voltage and hp, call the attack function on both
+    
+Pikachu.prototype = Object.create(Pokemon.prototype);
+
+var p1 = new Pikachu(10, 'Poke1',100,['quick attack','swift','bite','thunder'])
+var p2 = new Pikachu(10, 'Poke2',100,['fire','swim','fly','run'])
+
+console.log(p1.name,p1.voltage,p1.hp,p1.attack())
+console.log(p2.name,p2.voltage,p2.hp,p2.attack())
+
+    </script>
+    
+</body>
+</html>

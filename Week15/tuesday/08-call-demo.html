@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+	var ob = {
+		nam: 'Rob',
+	}
+
+	function updateObject(){
+		console.log('this', 'on line 7', this);
+		this.hat = true;
+	}
+
+	// in this scenario, this is the window
+		// updateObject();
+
+	//in this scenario, this is going to be the object named ob
+		//call can change what this is inside of a function
+		// updateObject.call(ob)
+
+	// console.log(ob)
+
+
+
+</script>
+</body>
+</html>

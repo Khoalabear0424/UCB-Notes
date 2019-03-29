@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<h2>computer pick</h2>
+
+<p></p>
+
+<h2>you pick</h2>
+<div>
+	<button data-value="1">1</button>
+	<button data-value="2">2</button>
+	<button data-value="3">3</button>
+	<button data-value="4">4</button>
+</div>
+
+<h2>result</h2>
+
+<p></p>
+<p>wins: <span></span></p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript">
+	var wins = 0;
+
+	$('button').on('click', function(){
+		//one way
+			var num = parseInt($(this).text());
+		//another way
+			// var num = $(this).data("value");
+
+		//computer picks a random number 1,2,3,4
+			var computerPick = Math.ceil(Math.random()*4);
+
+		//add the computerPick to the page
+			$('p').eq(0).text(computerPick);
+
+		if (num === computerPick){
+			$('p').eq(1).text('correct');
+			
+			wins++;
+			$('p').eq(2).children('span').text(wins);
+
+		}else{
+			$('p').eq(1).text('incorrect')
+		}
+	})
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

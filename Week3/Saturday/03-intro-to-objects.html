@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	//array
+
+		//this is not the right way of using an array, because an object is superior for this data
+
+			var allan = ["allan", "Sarah Plain and Tall", "tennis", true, "mac", true, "Metallica"];
+
+				// 0 -> "allan"
+				// 1 -> "Sarah Plain and Tall"
+				// 2 -> "tennis"
+				// 3 -> true
+				// 4 -> "mac"
+				// 5 -> true 
+				// 6 -> "Metallica"
+
+			//this prints allan's name
+			console.log(allan[0]);
+
+			//does allan have a pet?
+			console.log(allan[3]);
+
+		//what's the right situation to use an array
+
+			var nums = [4,6,7,1,2,3];
+			var names = ["peter", "rob", "carol"];
+
+				//when the data types have a similar purpose an array is really good otherwise an object is better
+
+	//this is an object
+
+		// var ob = {
+		// 	"thisIsTheKey" : "thisIsTheValue"
+		// }
+
+		//one way
+			var allanOb = {
+				name : "allan",
+				aBookRead : "Sarah Plain and Tall",
+				favoriteSport : "tennis",
+				hasAPet : true,
+				computerType : "mac",
+				currentlyWorksInTech : true,
+				aMusicianListenedToRecently : "Metallica"
+			}
+
+		//another way
+			var allanOb = {
+				"name" : "allan",
+				"aBookRead" : "Sarah Plain and Tall",
+				"favoriteSport" : "tennis",
+				"hasAPet" : true,
+				"computerType" : "mac",
+				"currentlyWorksInTech" : true,
+				"aMusicianListenedToRecently" : "Metallica"
+			}
+
+			//one way 
+
+				//this prints allan's name
+				console.log(allanOb[name]);
+
+				//does allan have a pet?
+				console.log(allan[hasAPet]);
+
+			//another way
+
+				//this prints allan's name
+				console.log(allanOb["name"]);
+
+				//does allan have a pet?
+				console.log(allan["hasAPet"]);
+
+			//another way
+
+				//this prints allan's name
+				console.log(allanOb.name);
+
+				//does allan have a pet?
+				console.log(allan.hasAPet);
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+

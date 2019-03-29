@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Intro to jQuery</title>
+</head>
+
+<body>
+    <p>bye</p>
+    <div id="container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    //pure JavaScript 
+
+        //one way
+            //selecting an element with an id of container
+            var cont = document.querySelector('#container');
+            
+            //creating an element - THAT IS NOT ON THE PAGE YET - it only lives in the JavaScript
+            var pa = document.createElement('p'); //<p></p>
+
+            //updating the text inside the paragraph - WHICH IS STILL NOT ON THE PAGE
+            pa.innerText = 'today is saturday'; //<p>today is saturday</p>
+
+            //NOW AFTER THIS LINE, the paragraph is added to the page
+            cont.appendChild(pa);
+
+        //another way
+            var cont = document.querySelector('#container');
+
+            var animal = 'bear';
+
+            cont.html('<p>today is saturday ' + animal + '</p>')
+
+
+    //using jQuery
+        //one way
+
+            //creating a paragraph tag 
+            //the triangular brackets means we're creating a paragraph tag 
+                //if we didn't include the triangular brackets, we would be selecting ALL paragraphs
+            var par = $('<p>'); //<p></p>
+
+            par.text('hello ' + animal); //<p>hello</p>
+
+          	//puts the paragraph at the bottom of the INSDIE of the div with an id of container
+            $('#container').append(par);
+
+        //another way
+            $('#container').html('<p>hello</p>');
+
+    //challenging example
+        var par = $('<p>'); //<p></p>
+
+        var span = $('<span>'); //<span></span>
+        span.text('hi');
+
+        par.text('hello'); //<p>hello</p>
+        par.attr('class', 'special tall'); //<p class='special tall'>hello</p>
+
+        par.prepend(span); //you can use append also
+            // <p class='special tall'>
+            //  <span>hi</span>
+            //     hello
+            // </p>
+
+        //puts the paragraph at the bottom of the INSDIE of the div with an id of container
+        $('#container').append(par);
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

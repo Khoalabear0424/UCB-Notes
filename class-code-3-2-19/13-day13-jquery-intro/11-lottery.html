@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<button>gen ran nine digit number</button>
+
+<div></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ 
+<script type="text/javascript">
+
+	$('button').on('click', function(){
+		var ans = "";
+
+		for (var i=0; i<9; i++){
+			ans += Math.floor(Math.random()*9)+1;
+		}
+
+		$('div').prepend("<p>" + ans + "</p>");
+	});
+</script>
+</body>
+</html>

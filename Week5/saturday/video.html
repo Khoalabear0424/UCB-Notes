@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div>
+        <h3>Video1</h3>
+        <button id="pb">Peanut Butter</button>
+        <button id="w">Watermelon</button>
+        <button id="c">Candy</button>
+    </div>
+
+    <div>
+        <h3>Video2</h3>
+        <button id="rand">Generate Random Num</button>
+        <p id="randOutput">???</p>
+
+    </div>
+
+    <div>
+            <h3>Video3</h3>
+            <button id="rando">Generate Random Num</button>
+            <p id="randOutputs"></p>
+    
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+        //------------Video 1---------------//
+        var pb = 1;
+        var w = 1;
+        var c = 1;
+
+        $("#pb").on("click", function () {
+            alert(pb++);
+        });
+
+        $("#w").on("click", function () {
+            alert(w++);
+        });
+
+        $("#c").on("click", function () {
+            alert(c++);
+        });
+        
+        //------------Video 2---------------//
+
+        $("#rand").on("click", function () {
+            var randomNum = Math.floor(Math.random() * 500);
+            $("#randOutput").html(randomNum);
+        });
+
+        //------------Video 3---------------//
+
+        $("#rando").on("click", function () {
+            var randomNum = Math.floor(Math.random() * 500);
+            $("#randOutputs").append(randomNum +"<br>");
+        });
+
+
+    </script>
+</body>
+
+</html>

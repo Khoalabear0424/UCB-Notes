@@ -1,0 +1,22 @@
+git checkout -b william
+
+	this creates a new branch named william
+
+	it's a copy of whatever branch you started on
+
+	in this case, we started on master, so we made a copy of master
+
+	any commits you make here STAY HERE ONLY
+
+git branch
+	
+	shows you the branches you have
+
+git checkout master 
+	
+	switches you back to the master branch
+
+git checkout william
+	
+	switches us back to the william branch
+

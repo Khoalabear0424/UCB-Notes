@@ -1,0 +1,17 @@
+body {
+	background-color: yellow;
+}
+
+img {
+	width: 50%;
+	height: auto;
+}
+
+h1 {
+	background-image: url("../images/penguin-family.jpg");
+	background-position: center; 
+	opacity: 0.5;
+	height: 200px;
+	font-size: 50px;
+
+}

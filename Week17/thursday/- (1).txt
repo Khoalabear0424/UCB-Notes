@@ -1,0 +1,6 @@
+1. write a query that shows the question, answer, name of person ONLY. Also sort the answers to highest to lowest
+2. find friends that have a similar score to you from the questions you answered
+    find the difference of answers from you and other people in the table
+        and then sort based on the lowest difference 
+            you can also sum the differences
+                and then sort based on the lowest difference sum

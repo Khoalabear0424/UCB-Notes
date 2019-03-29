@@ -1,0 +1,22 @@
+// make your own constructor function to create objects
+
+// make a Pokemon constructor function that makes an object 
+
+// 	with 3 keys in it
+//    		name, hp, attacks 
+	// name is a string
+
+	// hp is a number
+
+	// attacks is an array of attacks
+
+add an attack function to the prototype of the pokemon constructor function that chooses a random attack from the pokemon's attacks property and will console log it
+
+// use the Pokemon constructor function to create 3 pokemon objects
+
+// console log each object
+
+//call attack on each of the objects
+
+//for one of the objects give it an additional property of friendly = true
+

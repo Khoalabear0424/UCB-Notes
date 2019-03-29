@@ -1,0 +1,58 @@
+:root {
+    --red:red;
+    --blue:blue;
+    --green:green;
+    --orange:#FFA500;
+    --big:200%;
+    --tiny:40%;
+    --bold:bold;
+    --center:center;
+    --cursive: 'Poor Story', cursive;
+}
+
+h1{
+    text-align: center;
+}
+
+.red{
+    color:var(--red);
+}
+
+.blue{
+    color: var(--blue);
+}
+
+.green{
+    color: var(--green);
+}
+
+.orange{
+    color: var(--orange);
+}
+
+.big{
+    font-size: var(--big);
+}
+
+.tiny{
+    font-size: var(--tiny);
+}
+
+.centered{
+    text-align: var(--center)
+}
+
+.bold{
+    font-weight: var(--bold);
+}
+
+.cursive{
+    font-family: var(--cursive);
+}
+
+.styledImage{
+    padding:5px;
+    border:6px solid orange;
+}
+
+

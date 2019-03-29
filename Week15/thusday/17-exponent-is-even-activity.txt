@@ -1,0 +1,3 @@
+use recursion to determine if a number is even or odd
+
+you can't use division, modulus, math.floor or math.ceil

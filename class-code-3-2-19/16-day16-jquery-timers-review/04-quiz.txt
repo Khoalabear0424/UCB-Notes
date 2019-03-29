@@ -1,0 +1,13 @@
+1. write a function that takes two numbers and returns true if they are both greater than five
+
+	example: 
+		6, 8 should return true
+		4, 9 should return false
+
+2. write a function that takes an image url and returns an image 
+
+	example: world.jpg should return 
+
+		<img src="world.jpg">
+
+1:12

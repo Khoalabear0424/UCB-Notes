@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	// write a function that takes in a string and returns underscores separated by spaces for the number of letters in the string. 
+
+	// for example
+
+	// 	"hat" would return "_ _ _"
+
+	// 	"cell phone" would return "_ _ _ _ _ _ _ _ _ _"
+
+	// 		the space counts as one character
+
+	//one way
+		function changeUnderscores(str){
+			//i'm initializing a variable with an empty string
+			var underscoreString = "";
+
+			for (var k=0; k<str.length; k++){
+				if (k < str.length-1) underscoreString += "_ ";
+				else underscoreString += "_";
+			}
+
+			return underscoreString;
+		}
+
+	//another way
+		function changeUnderscores(str){
+			//i'm initializing a variable with an empty string
+			var underscoreString = "";
+
+			for (var k=0; k<str.length; k++){
+				if (k == str.length-1) underscoreString += "_";
+				else underscoreString += "_ ";
+			}
+
+			return underscoreString;
+		}
+
+	//another way
+		function changeUnderscores(str){
+			//i'm initializing a variable with an empty string
+			var underscoreString = "";
+
+			for (var k=0; k<str.length; k++){
+				if (k == str.length-1) {
+					underscoreString = underscoreString + "_";
+				} else{
+					underscoreString = underscoreString + "_ ";
+				} 
+			}
+
+			return underscoreString;
+		}
+
+
+	//another way
+		function changeUnderscores(str){
+			var underscoreString = str.replace(/[a-z]/g, '_ ');
+
+			return underscoreString.substr(0,a.length-1);
+		}
+		
+</script>
+</body>
+</html>

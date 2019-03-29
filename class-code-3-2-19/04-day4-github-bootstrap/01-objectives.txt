@@ -1,0 +1,7 @@
+1. students will review html and css concepts
+
+2. students will use bootstrap to make styling elements easier
+
+3. students will push and pull code to github
+
+4. students will deploy a html page onto github pages

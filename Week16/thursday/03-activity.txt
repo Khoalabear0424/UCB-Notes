@@ -1,0 +1,5 @@
+activity:
+
+Make a tvshows_db database. Connect to it, and then create a tvshows table with 3 columns (columns: id, tvshow_name), make a ratings table (columns: id, rating and tvshow_id), insert 6 tv shows into the table and insert 2 ratings for each tv show into the ratings table
+
+	ask students in slack for their ratings
