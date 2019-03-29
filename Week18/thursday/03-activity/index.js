@@ -26,22 +26,24 @@ var partners = [
 ];
 
 app.get('/', function (req, res) {
-    res.send('Khoa, Kelly, and Ellie')
+    res.send('<h2>Links you can go to</h2> \n <a href="/0">Khoa</a>')
 })
 
-app.get('/khoa', function (req, res) {
+app.get('/0', function (req, res) {
     res.json(partners[0]);
 })
 
-app.get('/kelly', function (req, res) {
+app.get('/1', function (req, res) {
     res.json(partners[1]);
 })
 
-app.get('/ellie', function (req, res) {
+app.get('/2', function (req, res) {
     res.json(partners[2]);
 })
 
 
-app.listen(3000)
+app.listen(3000, () => {
+    console.log(`Listening on port 3000...`)
+})
 
 //hello
