@@ -11,6 +11,7 @@
 
 <body>
 	<h1>Index</h1>
+	<div id="div1"></div>
 	<ol>
 		<li>
 			<img src="pup1.jpg" alt="pupp1">
@@ -22,6 +23,15 @@
 			<img src="pup3.jpg" alt="pupp3">
 		</li>
 	</ol>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$.ajax({
+			url: "/tvshows", success: function (result) {
+				$("#div1").html(JSON.stringify(result));
+			}
+		});
+	</script>
 </body>
 
 </html>
