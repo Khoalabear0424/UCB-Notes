@@ -1,0 +1,14 @@
+make an express app that sends back a html file with a h1 of hello in it when the user goes to the root route
+
+make another route called /will-smith
+
+	send back a file called will.html
+
+		in the html file put information about where will smith was born and 3 movies that will smith was in
+
+make another route called /nicolas-cage
+
+	send back a file called nicolas-cage.html
+
+		in the html file make an ajax call to a movie nicolas-cage was in and display the json on the page
+
