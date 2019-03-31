@@ -10,7 +10,16 @@
 </head>
 
 <body>
-	<h1>Index</h1>
+	<h2>Index</h2>
+	<button id="tvshows">Generate Movie Info</button>
+
+	<form action="/data" method="POST">
+		New Movie:<br>
+		<input type="text" name="firstname" value="The Matrix">
+		<br>
+		<input type="submit" value="Submit">
+	</form>
+
 	<div id="div1"></div>
 	<ol>
 		<li>
@@ -26,11 +35,16 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
-		$.ajax({
-			url: "/tvshows", success: function (result) {
-				$("#div1").html(JSON.stringify(result));
-			}
-		});
+		$('#tvshows').on('click', () => {
+			$.ajax({
+				url: "/tvshows", success: function (result) {
+					for (var i = 0; i < result.length; i++) {
+						$("#div1").append(JSON.stringify(`${result[i].tvshow_name}`));
+						$("#div1").append("<br>");
+					}
+				}
+			});
+		})
 	</script>
 </body>
 
