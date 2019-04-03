@@ -33,11 +33,17 @@ app.get('/tvshows', function (req, res) {
 	});
 });
 
-app.post('/data', function (req, res) {
+//THIS IS WHERE I NEED HELP!!
+app.post('/', function (req, res) {
 	con.query(`INSERT INTO tvshows (tvshow_name) VALUES ("${req.body.firstname}")`, function (error, results, fields) {
 		if (error) res.send(error)
 		else res.json(results);
 	});
+});
+
+app.post('/endpoint', function (req, res) {
+	console.log(req.body)
+	res.send("got it")
 });
 
 app.listen(3001, function () {
