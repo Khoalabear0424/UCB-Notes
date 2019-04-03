@@ -1,8 +1,23 @@
+var mysql = require('mysql');
+var express = require('express')
+var app = express()
 
-// make an express app with a public folder that is static with an index.html file
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'password',
+    database: 'cats_db'
+});
+connection.connect();
+app.use(express.static("public"));
 
-// make a route /cats
+app.get('/cat.json', function (req, res) {
+    connection.query('SELECT * FROM cats', function (error, results, fields) {
+        if (error) throw error;
+        res.json(results);
+    });
+})
 
-//     that sends all the cats from the cats table as json
-
-// in the index.html file make an ajax call to the /cats route and make paragraph tags for each cat and put them in the body of the index.html file
+app.listen(3000, () => {
+    console.log(`Listening on port 3000`);
+})
