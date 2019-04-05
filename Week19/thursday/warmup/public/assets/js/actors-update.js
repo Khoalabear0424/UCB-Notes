@@ -8,7 +8,7 @@ $('#update_actor').submit(function (e) {
 
 	$.ajax({
 		url: '/actors-update/' + ci,
-		method: 'GET',
+		method: 'POST',
 		data: { actor_name: cn }
 	}).then(function (message) {
 		getactors();

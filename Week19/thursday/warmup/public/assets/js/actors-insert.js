@@ -5,7 +5,7 @@ $('form').submit(function (e) {
 
 	$.ajax({
 		url: '/actors-insert',
-		method: 'GET',
+		method: 'POST',
 		data: { actor_name: cn }
 	}).then(function (message) {
 		getactors();

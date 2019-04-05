@@ -23,7 +23,7 @@ app.get('/actors.json', function (req, res) {
 // http://localhost:3001/actors-insert?actor_name=bobbi
 
 //HERE
-app.get('/actors-insert', function (req, res) {
+app.post('/actors-insert', function (req, res) {
     connection.query('INSERT INTO actors (actor_name) VALUES (?)', [req.query.actor_name], function (error, results, fields) {
         if (error) res.send(error)
         else res.json({
@@ -48,7 +48,7 @@ app.get('/actors-delete', function (req, res) {
 // http://localhost:3001/actors-update/4?actor_name=dragon
 
 //HERE
-app.get('/actors-update/:id', function (req, res) {
+app.post('/actors-update/:id', function (req, res) {
     connection.query('UPDATE actors SET actor_name = (?) WHERE id = (?)', [req.query.actor_name, req.params.id], function (error, results, fields) {
 
         res.redirect('/');
