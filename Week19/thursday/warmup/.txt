@@ -1,0 +1,2 @@
+pavankat [6:06 PM]
+create a database called actors_db. Make an actors table with an id and actor_name. Put this into a schema.sql file. Make a seeds.sql file where you insert 5 actors into the actors table. make an express app that displays the actors on the page. Add delete buttons next to each actor. Make a form that will allow the user to insert a new actor into the database. Make another form that will let users edit actors from the database.
