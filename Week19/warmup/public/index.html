@@ -12,6 +12,10 @@
     <h1>CATS!</h1>
     <div id="div1"></div>
 
+    <form>
+        <input type="text" name="cat">
+    </form>
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
         crossorigin="anonymous"></script>
     <script>
@@ -19,13 +23,41 @@
             url: "/cat.json",
             method: 'GET'
         }).then(function (cats) {
-            console.log(cats);
-            for (var i in cats) {
+            var cs = JSON.parse(cats);
+            console.log(cs)
+            for (var i in cs) {
                 var p = $('<p>');
-                p.text(cats[i]);
+                p.text(JSON.stringify(cs[i]));
                 $('#div1').append(p);
             }
         })
+
+
+
+        // $.ajax({
+        //     url: '/cat.json',
+        //     method: 'GET'
+        // }).then(function (cats) {
+        //     for (var catIndex in cats) {
+        //         // console.log(catIndex);
+        //         // console.log(cats[catIndex]);
+        //         // console.log(cats);
+
+        //         var p = $('<p>'); // <p></p>
+
+        //         //one way
+        //         // p.text(JSON.stringify(cats[catIndex]))
+
+        //         //another way
+        //         // p.text("id: " + cats[catIndex].id + ", cat name: " + cats[catIndex].cat_name)
+
+        //         //another way
+        //         p.text(`id: ${cats[catIndex].id}, cat name: ${cats[catIndex].place_name}`)
+
+
+        //         $('div').append(p);
+        //     }
+        // })
     </script>
 </body>
 
