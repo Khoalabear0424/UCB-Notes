@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		//example one
+
+		// localStorage.setItem('a', 3);
+
+		// localStorage.getItem('a');
+
+		//example two
+
+		var ob = { name: "omar", location: "sf" }
+
+		JSON.stringify(ob)
+		//  "{"name":"omar","location":"sf"}"
+
+		localStorage.setItem('omar', JSON.stringify(ob))
+
+		localStorage.getItem('omar')
+
+		//  "{"name":"omar","location":"sf"}"
+
+		var omarStr = localStorage.getItem('omar');
+
+		JSON.parse(omarStr)
+		// { name: "omar", location: "sf" }
+	</script>
+</body>
+
+</html>
