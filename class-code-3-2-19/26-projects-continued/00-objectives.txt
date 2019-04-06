@@ -1,5 +1,0 @@
-1. students will go over how to do pull requests
-
-
-
-Note: don't let github hold you back. If you're having trouble using pull requests and branches appropriately, then just have one person manage the github for the time being.

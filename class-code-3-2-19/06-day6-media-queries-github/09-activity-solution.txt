@@ -1,6 +1,0 @@
-one way
-	document.querySelector('div').innerHTML = x;
-
-another way
-	document.querySelector('div').innerText = x;
-

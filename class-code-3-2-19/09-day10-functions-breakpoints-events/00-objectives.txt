@@ -1,5 +1,0 @@
-1. students will use break points to help the debugging process
-
-2. students will practice writing functions
-
-3. students will use events to trigger functions on certain user actions

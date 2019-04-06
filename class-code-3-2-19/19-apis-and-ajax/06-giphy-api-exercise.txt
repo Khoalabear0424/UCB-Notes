@@ -1,5 +1,0 @@
-https://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC
-
-that api end point has all of the trending gif urls right now
-
-loop over all of them and add them to a html page

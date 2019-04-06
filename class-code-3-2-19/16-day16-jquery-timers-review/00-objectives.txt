@@ -1,9 +1,0 @@
-1. students will continue with the calculator exercise and the 07-create-elements exercise
-
-2. students will take a quiz
-
-3. students will determine what a variable's value will be based on where it is in the code
-
-4. students will use timers to delay their code by a certain number of milliseconds
-
-5. students will use intervals to repeat their code certain number of milliseconds

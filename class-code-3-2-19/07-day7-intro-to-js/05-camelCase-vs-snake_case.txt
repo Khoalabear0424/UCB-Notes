@@ -1,7 +1,0 @@
-camel case
-	
-	var catName = 'felix';
-
-snake case
-
-	var cat_name = 'felix';

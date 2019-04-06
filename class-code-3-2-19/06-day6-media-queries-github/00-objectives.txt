@@ -1,2 +1,0 @@
-1. students will use media queries
-2. students will practice github

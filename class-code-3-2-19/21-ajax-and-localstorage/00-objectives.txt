@@ -1,7 +1,0 @@
-1. students will make a movie poster app with the OMDB API
-
-2. students will use data attributes to pause and unpause gifs
-
-3. students will use localStorage to "save" data
-	
-	another way of saying "save" is persist

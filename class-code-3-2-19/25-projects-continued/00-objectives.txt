@@ -1,7 +1,0 @@
-1. students will practice using git branches
-
-2. students will take a survey on how things are going so far in their project
-
-https://docs.google.com/forms/d/1za2Ctw127_0hwIeG472hGilqAn4Pl4ucKOPwLaLiWV8/edit
-
-2. students will all get their idea approved, show that their APIs work, get their wireframe approved, get their trellos approved

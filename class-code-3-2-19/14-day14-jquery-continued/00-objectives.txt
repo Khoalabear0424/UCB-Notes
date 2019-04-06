@@ -1,9 +1,0 @@
-1. students will see where $(document).ready is necessary
-
-2. students will attach click events to buttons that were added to the html after the page loaded
-
-3. students will use this and $(this)
-
-4. students will use data attributes to attach data to html and retrieve data from html
-
-5. students will review data attributes at home https://www.youtube.com/watch?v=Gp_eomV2OaQ

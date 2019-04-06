@@ -1,9 +1,0 @@
-make your own constructor function to create objects
-
-make an Animal constructor function that makes an object with 5 keys in it
-
-	name, species, hasFur, canSwim, canFly
-
-use the Animal constructor function to create 3 objects 
-
-console log each object

@@ -1,2 +1,0 @@
-1. students will go over how to make ajax like calls to urls to get data on the backend
-

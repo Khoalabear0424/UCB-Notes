@@ -1,3 +1,0 @@
-1. students will append to files
-
-2. students will use process.argv

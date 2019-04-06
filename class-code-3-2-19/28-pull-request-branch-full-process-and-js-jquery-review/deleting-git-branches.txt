@@ -1,5 +1,0 @@
-delete a local branch (lives on your computer)
-	$ git branch -d <branch> # Shorter version
-
-delete a remote branch (lives on github)
-	$ git branch -dr orgin/<branch> # Shorter

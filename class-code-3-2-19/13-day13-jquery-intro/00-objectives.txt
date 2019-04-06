@@ -1,5 +1,0 @@
-1. students will use a JavaScript library called jQuery to do html manipulation (DOM manipulation)
-
-2. students will compare jQuery's methods with JavaScript's methods
-
-3. 
