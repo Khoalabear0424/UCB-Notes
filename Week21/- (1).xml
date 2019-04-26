@@ -1,0 +1,30 @@
+make a database called classmates_db
+
+insert a document into a classmates collection with the following fields
+
+	name, skateboarded, hobbies
+
+	name is a string, skateboarded is a boolean, hobbies is an array of hobbies they have
+
+insert all your classmates in 
+
+		db.classmate_db.insert({name:"Kelly",skateboarded:false,hobbies:["cooking","dancing"]});
+
+		db.classmate_db.insert({name:"Khoa",skateboarded:true,hobbies:["singing","dancing"]});
+
+		db.classmate_db.insert({name:"Ellie",skateboarded:false,hobbies:["barking","eating"]});
+
+
+query your database for all the classmates that have skateboarded
+
+		db.classmate_db.find({skateboarded:true});
+
+query your database for all the classmates that have not skateboarded
+
+		db.classmate_db.find({skateboarded:false});
+
+query your database for all the classmates that have a hobby of skateboarding
+
+		db.classmate_db.find({"hobbies":{$in:["dancing"]}});
+
+query your database for all the classmates named 'rob'
