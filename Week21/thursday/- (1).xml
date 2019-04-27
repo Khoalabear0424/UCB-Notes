@@ -1,5 +1,7 @@
 make a database called classmates_db
 
+		use classmates_db
+
 insert a document into a classmates collection with the following fields
 
 	name, skateboarded, hobbies

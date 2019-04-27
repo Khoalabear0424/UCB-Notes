@@ -1,0 +1,24 @@
+use mongo for this
+make an express api that has the following routes
+
+a database named frogs_db
+
+a collection named frogs
+
+a get route that gets you all documents from the frogs collection
+
+a get route that gets you one frog by its _id
+
+a post route that inserts a frog document with following information: name, species
+
+a put route that updates a frog's name and species by its _id
+
+a delete route that deletes a frog by its _id
+
+please write curl calls to test each route
+
+note: you do not have to go into the mongo console for this - mongo will automatically do everything for you including making the database
+
+you can however go into check if everything worked the way you thought
+
+hint: you can look at the code i sent out going over this on thursday
