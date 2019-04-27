@@ -3,11 +3,10 @@ var express = require("express");
 var mongojs = require("mongojs");
 var bodyParser = require('body-parser');
 
-var PORT = process.env.PORT || 3002;
+var PORT = process.env.PORT || 3000;
 var app = express();
 
 app.use(bodyParser());
-app.use(express.static("public"));
 
 // Database configuration
 var databaseUrl = process.env.MONGODB_URI || "frogs_db";

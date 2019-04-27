@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Frogs</title>
+</head>
+
+<body>
+	<h1>Frogs</h1>
+	<div>
+
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript">
+		$.ajax({
+			method: 'GET',
+			url: '/frogs'
+		}).then(function (frogs) {
+			for (var fIndex in frogs) {
+				var $p = $('<p>');
+				$p.text(`_id: ${frogs[fIndex]._id} - name: ${frogs[fIndex].name} - species: ${frogs[fIndex].species}`);
+				var $deleteBtn = $('<button>');
+				$deleteBtn.text('Delete')
+				$deleteBtn.addClass('delete_item')
+				$deleteBtn.attr('data-item_id', frogs[fIndex]._id)
+				$deleteBtn.on('click', deleteItem)
+				$p.append($deleteBtn)
+
+				$('div').append($p);
+			}
+		})
+		function deleteItem() {
+			var item_id = $(this).attr('data-item_id')
+			console.log(item_id)
+
+			$.ajax({
+				method: 'DELETE',
+				url: `/frogs/${item_id}`,
+			}).then((delete_frog) => {
+				console.log(`Successfully delete item id of ${delete_frog}`)
+				location.reload();
+			})
+		}
+	</script>
+</body>
+
+</html>
