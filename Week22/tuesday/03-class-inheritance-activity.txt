@@ -1,0 +1,37 @@
+in one file do all of this
+
+make a class called Person that has the following properties:
+
+	name, favSport, favBackstreetboy
+
+	has a function called playSport
+
+		that console logs 
+
+			Frank is playing soccer
+
+				except use the person's name and favSport in the console log
+
+make a class called SuperHero that extends Person that has the following properties:
+
+	name, favSport, favBackstreetboy (via the Person class)
+
+	and 
+
+	superHeroName, superPowers (this is an array), backgroundStory
+
+	a function named doARanMove
+
+		that console logs a random superPower like this
+
+			Backwardo walked backwards!
+
+				except you'd use the superHeroName property and superPowers property
+
+
+
+
+
+
+
+
