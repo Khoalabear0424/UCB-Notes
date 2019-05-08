@@ -18,6 +18,7 @@ p.greeting();
 class Dancer extends Person {
     constructor(name, height, move, stamina) {
         // Call person constructor function and pass these to it
+        // You have to say super to be able to call the Person constructor function
         super(name, height);
 
         this.move = move;
@@ -25,7 +26,7 @@ class Dancer extends Person {
     }
 
     dance() {
-        console.log(`The ${this.move} is my favorite move`)
+        console.log(`My name is ${this.name} and the ${this.move} is my favorite move`)
     }
 }
 
